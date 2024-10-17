@@ -1,0 +1,749 @@
+{
+    "NH": {
+        "Institute Acronym": "NIH",
+        "Full Institute/Organization Name": "National Institutes of Health",
+        "Wikidata": "Q390551",
+        "lgbtdb": "Q26210"
+    },
+    "AA": {
+        "Institute Acronym": "NIAAA",
+        "Full Institute/Organization Name": "National Institute on Alcohol Abuse and Alcoholism",
+        "Wikidata": "Q16821236"
+    },
+    "AG": {
+        "Institute Acronym": "NIA",
+        "Full Institute/Organization Name": "National Institute on Aging",
+        "Wikidata": "Q5969362",
+        "lgbtdb": "Q26221"
+    },
+    "AI": {
+        "Institute Acronym": "NIAID",
+        "Full Institute/Organization Name": "National Institute of Allergy and Infectious Diseases Extramural Activities",
+        "lgbtdb": "Q26218"
+    },
+    "AO": {
+        "Institute Acronym": "NIAID",
+        "Full Institute/Organization Name": "National Institute of Allergy and Infectious Diseases Research Support"
+    },
+    "AM": {
+        "Institute Acronym": "NIADDK",
+        "Full Institute/Organization Name": "National Institute of Arthritis, Diabetes, and Digestive and Kidney Diseases"
+    },
+    "AR": {
+        "Institute Acronym": "NIAMS",
+        "Full Institute/Organization Name": "National Institute of Arthritis and Musculoskeletal and Skin Diseases",
+        "Wikidata": "Q6973606"
+    },
+    "AT": {
+        "Institute Acronym": "NCCIH",
+        "Full Institute/Organization Name": "National Center for Complementary and Integrative Health",
+        "Wikidata": "Q3278030"
+    },
+    "CA": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "National Cancer Institute",
+        "Wikidata": "Q664846",
+        "lgbtdb": "Q26223"
+    },
+    "CO": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Office of the Director"
+    },
+    "BC": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Basic Sciences"
+    },
+    "CN": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Cancer Prevention and Control"
+    },
+    "CB": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Cancer Biology and Diagnosis"
+    },
+    "CP": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Cancer Epidemiology and Genetics",
+        "Wikidata": "Q45134916"
+    },
+    "CM": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Cancer Treatment"
+    },
+    "PC": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Cancer Control and Population Science"
+    },
+    "SC": {
+        "Institute Acronym": "NCI",
+        "Full Institute/Organization Name": "Division of Clinical Sciences"
+    },
+    "CL": {
+        "Institute Acronym": "CLC",
+        "Full Institute/Organization Name": "Clinical Center",
+        "Wikidata": "Q6973757"
+    },
+    "CT": {
+        "Institute Acronym": "CIT",
+        "Full Institute/Organization Name": "Center for Information Technology",
+        "Wikidata": "Q5059684"
+    },
+    "DA": {
+        "Institute Acronym": "NIDA",
+        "Full Institute/Organization Name": "National Institute on Drug Abuse",
+        "Wikidata": "Q6973751",
+        "lgbtdb": "Q26216"
+    },
+    "DC": {
+        "Institute Acronym": "NIDCD",
+        "Full Institute/Organization Name": "National Institute on Deafness and other Communication Disorders",
+        "Wikidata": "Q10843453"
+    },
+    "DE": {
+        "Institute Acronym": "NIDCR",
+        "Full Institute/Organization Name": "National Institute of Dental and Craniofacial Research",
+        "Wikidata": "Q6973632"
+    },
+    "DK": {
+        "Institute Acronym": "NIDDK",
+        "Full Institute/Organization Name": "National Institute of Diabetes and Digestive and Kidney Diseases",
+        "Wikidata": "Q29220409"
+    },
+    "DS": {
+        "Institute Acronym": "DS",
+        "Full Institute/Organization Name": "Division of Safety, Office of Research Services"
+    },
+    "EB": {
+        "Institute Acronym": "NIBIB",
+        "Full Institute/Organization Name": "National Institute of Biomedical Imaging and Bioengineering",
+        "Wikidata": "Q6973612"
+    },
+    "ES": {
+        "Institute Acronym": "NIEHS",
+        "Full Institute/Organization Name": "National Institute of Environmental Health Sciences",
+        "Wikidata": "Q1284039"
+    },
+    "EY": {
+        "Institute Acronym": "NEI",
+        "Full Institute/Organization Name": "National Eye Institute",
+        "Wikidata": "Q1814921"
+    },
+    "GF": {
+        "Institute Acronym": "NIH",
+        "Full Institute/Organization Name": "Gift Fund"
+    },
+    "GM": {
+        "Institute Acronym": "NIGMS",
+        "Full Institute/Organization Name": "National Institute of General Medical Sciences",
+        "Wikidata": "Q6973666",
+        "lgbtdb": "Q26212"
+    },
+    "GW": {
+        "Institute Acronym": "GAS",
+        "Full Institute/Organization Name": "Genome Association Studies"
+    },
+    "HD": {
+        "Institute Acronym": "NICHD",
+        "Full Institute/Organization Name": "National Institute of Child Health and Human Development",
+        "Wikidata": "Q5409765",
+        "lgbtdb": "Q26222"
+    },
+    "HG": {
+        "Institute Acronym": "NHGRI",
+        "Full Institute/Organization Name": "National Human Genome Research Institute",
+        "Wikidata": "Q1634459"
+    },
+    "HL": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "National Heart, Lung, and Blood Institute",
+        "Wikidata": "Q6973027"
+    },
+    "HV": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "Division of Heart and Vascular Diseases"
+    },
+    "HB": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "Division of Blood Diseases and Resources"
+    },
+    "HR": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "Division of Lung Diseases"
+    },
+    "HI": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "Division of Intramural Research",
+        "Wikidata": "Q123512444"
+    },
+    "HO": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "Office of the Director"
+    },
+    "HC": {
+        "Institute Acronym": "NHLBI",
+        "Full Institute/Organization Name": "Division of Epidemiology and Clinical Applications"
+    },
+    "JT": {
+        "Institute Acronym": "NIH",
+        "Full Institute/Organization Name": "Joint Grant and Contract Sponsorship"
+    },
+    "LM": {
+        "Institute Acronym": "NLM",
+        "Full Institute/Organization Name": "National Library of Medicine",
+        "Wikidata": "Q611833"
+    },
+    "MD": {
+        "Institute Acronym": "NIMHD",
+        "Full Institute/Organization Name": "National Institute on Minority Health and Health Disparities",
+        "Wikidata": "Q6973755",
+        "lgbtdb": "Q26219"
+    },
+    "MH": {
+        "Institute Acronym": "NIMH",
+        "Full Institute/Organization Name": "National Institute of Mental Health",
+        "Wikidata": "Q1967405",
+        "lgbtdb": "Q26215"
+    },
+    "NB": {
+        "Institute Acronym": "NB",
+        "Full Institute/Organization Name": "Neuroscience Blueprint"
+    },
+    "NR": {
+        "Institute Acronym": "NINR",
+        "Full Institute/Organization Name": "National Institute of Nursing Research",
+        "Wikidata": "Q6973682"
+    },
+    "NS": {
+        "Institute Acronym": "NINDS",
+        "Full Institute/Organization Name": "National Institute of Neurological Disorders and Stroke",
+        "Wikidata": "Q645285"
+    },
+    "OD": {
+        "Institute Acronym": "NIH",
+        "Full Institute/Organization Name": "Office of the Director",
+        "Wikidata": "Q30296573"
+    },
+    "OF": {
+        "Institute Acronym": "ORFDO",
+        "Full Institute/Organization Name": "Office of Research Facilities Development and Operations"
+    },
+    "OL": {
+        "Institute Acronym": "OLAO",
+        "Full Institute/Organization Name": "Office of Logistics and Acquisition Operations"
+    },
+    "OP": {
+        "Institute Acronym": "OppNet",
+        "Full Institute/Organization Name": "NIH Basic Behavioral and Social Science Opportunity Network"
+    },
+    "OR": {
+        "Institute Acronym": "ORS",
+        "Full Institute/Organization Name": "Office of Research Services",
+        "Wikidata": "Q33122148"
+    },
+    "RA": {
+        "Institute Acronym": "ARRA",
+        "Full Institute/Organization Name": "American Reinvestment and Recovery Act of 2009",
+        "Wikidata": "Q466637"
+    },
+    "RC": {
+        "Institute Acronym": "CCR",
+        "Full Institute/Organization Name": "Center for Cancer Research",
+        "Wikidata": "Q30281467"
+    },
+    "RG": {
+        "Institute Acronym": "CSR",
+        "Full Institute/Organization Name": "Center for Scientific Review",
+        "Wikidata": "Q5059867"
+    },
+    "RI": {
+        "Institute Acronym": "ORIP",
+        "Full Institute/Organization Name": "Office of Research Infrastructure Programs",
+        "Wikidata": "Q117776269"
+    },
+    "RM": {
+        "Institute Acronym": "RMOD",
+        "Full Institute/Organization Name": "NIH Roadmap Initiative, Office of the Director"
+    },
+    "RR": {
+        "Institute Acronym": "NCRR",
+        "Full Institute/Organization Name": "National Center for Research Resources",
+        "Wikidata": "Q6971366"
+    },
+    "RS": {
+        "Institute Acronym": "DRS",
+        "Full Institute/Organization Name": "Division of Research Services"
+    },
+    "SF": {
+        "Institute Acronym": "SBRP",
+        "Full Institute/Organization Name": "Superfund Basic Research Program"
+    },
+    "TR": {
+        "Institute Acronym": "NCATS",
+        "Full Institute/Organization Name": "National Center for Advancing Translational Sciences",
+        "Wikidata": "Q16932123",
+        "lgbtdb": "Q26209"
+    },
+    "TW": {
+        "Institute Acronym": "FIC",
+        "Full Institute/Organization Name": "Fogarty International Center",
+        "Wikidata": "Q6230737",
+        "lgbtdb": "Q26962"
+    },
+    "WH": {
+        "Institute Acronym": "WHI",
+        "Full Institute/Organization Name": "Women's Health Initiative",
+        "Wikidata": "Q1451732"
+    },
+    "WT": {
+        "Institute Acronym": "WETP",
+        "Full Institute/Organization Name": "Worker Education Training Program"
+    },
+
+    "AF": {
+        "Institute Acronym": "ACF",
+        "Full Institute/Organization Name": "Administration for Children and Families",
+        "Wikidata": "Q4683424"
+    },
+    "HS": {
+        "Institute Acronym": "AHRQ",
+        "Full Institute/Organization Name": "Agency for Healthcare Research and Quality",
+        "Wikidata": "Q4692008",
+        "lgbtdb": "Q26963"
+    },
+
+    "AD": {
+        "Institute Acronym": "ADAMHA",
+        "Full Institute/Organization Name": "Office of the Administrator"
+    },
+
+    "CC": {
+        "Institute Acronym": "CDC",
+        "Full Institute/Organization Name": "Centers for Disease Control and Prevention",
+        "Wikidata": "Q583725",
+        "lgbtdb": "Q23824"
+    },
+    "CD": {
+        "Institute Acronym": "ODCDC",
+        "Full Institute/Organization Name": "Office of the Director"
+    },
+    "CE": {
+        "Institute Acronym": "NCIPC",
+        "Full Institute/Organization Name": "National Center for Injury Prevention and Control",
+        "Wikidata": "Q6971343"
+    },
+    "CH": {
+        "Institute Acronym": "OID",
+        "Full Institute/Organization Name": "Office of Infectious Disease",
+        "Wikidata": "Q33121531"
+    },
+    "CI": {
+        "Institute Acronym": "NCPDCID",
+        "Full Institute/Organization Name": "National Center for Preparedness, Detection, and Control of Infectious Diseases",
+        "Wikidata": "Q45137824"
+    },
+    "CK": {
+        "Institute Acronym": "NCEZID",
+        "Full Institute/Organization Name": "National Center for Emerging and Zoonotic Infectious Diseases",
+        "Wikidata": "Q30282068"
+    },
+    "DD": {
+        "Institute Acronym": "NCBDD",
+        "Full Institute/Organization Name": "National Center on Birth Defects and Developmental Disabilities",
+        "Wikidata": "Q30296718"
+    },
+    "DP": {
+        "Institute Acronym": "NCCDPHP",
+        "Full Institute/Organization Name": "National Center for Chronic Disease Prevention and Health Promotion",
+        "Wikidata": "Q30281012"
+    },
+    "EH": {
+        "Institute Acronym": "NCEH",
+        "Full Institute/Organization Name": "National Center for Environmental Health",
+        "Wikidata": "Q30281009"
+    },
+    "EP": {
+        "Institute Acronym": "EAPO",
+        "Full Institute/Organization Name": "Epidemiology and Analytic Methods Program Office"
+    },
+    "GD": {
+        "Institute Acronym": "OGDP",
+        "Full Institute/Organization Name": "Office of Genomics and Disease Prevention"
+    },
+    "GH": {
+        "Institute Acronym": "CGH",
+        "Full Institute/Organization Name": "Center for Global Health",
+        "Wikidata": "Q30264163"
+    },
+    "HK": {
+        "Institute Acronym": "PHITPO",
+        "Full Institute/Organization Name": "Public Health Informatics and Technology Program Office"
+    },
+    "HM": {
+        "Institute Acronym": "NCHM",
+        "Full Institute/Organization Name": "National Center for Health Marketing"
+    },
+    "HY": {
+        "Institute Acronym": "OHS",
+        "Full Institute/Organization Name": "Office of Health and Safety",
+        "Wikidata": "Q30272836"
+    },
+    "IP": {
+        "Institute Acronym": "NCIRD",
+        "Full Institute/Organization Name": "National Center for Immunization and Respiratory Diseases",
+        "Wikidata": "Q17082548"
+    },
+    "LS": {
+        "Institute Acronym": "LSPPPO",
+        "Full Institute/Organization Name": "Laboratory Science, Policy, and Practice Program Office"
+    },
+    "MN": {
+        "Institute Acronym": "OMHHE",
+        "Full Institute/Organization Name": "Office of Minority Health and Health Equity",
+        "Wikidata": "Q33122151"
+    },
+    "ND": {
+        "Institute Acronym": "ONDIEH",
+        "Full Institute/Organization Name": "Office of Non-communicable Diseases, Injury, and Environmental Health"
+    },
+    "OE": {
+        "Institute Acronym": "OSELS",
+        "Full Institute/Organization Name": "Office of Surveillance, Epidemiology and Laboratory Services"
+    },
+    "OH": {
+        "Institute Acronym": "NIOSH",
+        "Full Institute/Organization Name": "National Institute for Occupational Safety and Health",
+        "Wikidata": "Q60346"
+    },
+    "OT": {
+        "Institute Acronym": "OSTLTS",
+        "Full Institute/Organization Name": "Office for State, Tribal, and Local and Territorial Support",
+        "Wikidata": "Q30264162"
+    },
+    "OW": {
+        "Institute Acronym": "OWH",
+        "Full Institute/Organization Name": "Office of Women's Health",
+        "Wikidata": "Q17072404"
+    },
+    "PH": {
+        "Institute Acronym": "PHPPO",
+        "Full Institute/Organization Name": "Public Health Practice Program Office"
+    },
+    "PR": {
+        "Institute Acronym": "OCPHP",
+        "Full Institute/Organization Name": "Office of Chief Public Health Practice"
+    },
+    "PS": {
+        "Institute Acronym": "NCHHSTP",
+        "Full Institute/Organization Name": "National Center for HIV, Viral Hepatitis, STDs and Tuberculosis Prevention",
+        "Wikidata": "Q17008039",
+        "lgbtdb": "Q26220"
+    },
+    "SE": {
+        "Institute Acronym": "SEPDPO",
+        "Full Institute/Organization Name": "Scientific Education and Professional Development Program Office"
+    },
+    "SH": {
+        "Institute Acronym": "NCHS",
+        "Full Institute/Organization Name": "National Center for Health Statistics",
+        "Wikidata": "Q3336854"
+    },
+    "SO": {
+        "Institute Acronym": "PHSPO",
+        "Full Institute/Organization Name": "Public Health Surveillance Program Office"
+    },
+    "TP": {
+        "Institute Acronym": "OPHPR",
+        "Full Institute/Organization Name": "Office of Public Health Preparedness and Response",
+        "Wikidata": "Q30264160"
+    },
+    "TS": {
+        "Institute Acronym": "ATSDR",
+        "Full Institute/Organization Name": "Agency for Toxic Substances and Disease Registry",
+        "Wikidata": "Q4692019"
+    },
+    "WC": {
+        "Institute Acronym": "OWCD",
+        "Full Institute/Organization Name": "Office of Workforce and Career Development"
+    },
+
+    "HH": {
+        "Institute Acronym": "HHS",
+        "Full Institute/Organization Name": "Department of Health and Human Services",
+        "Wikidata": "Q942326"
+    },
+    "AE": {
+        "Institute Acronym": "ASPE",
+        "Full Institute/Organization Name": "Assistant Secretary of Planning and Evaluation",
+        "Wikidata": "Q16868977"
+    },
+    "OC": {
+        "Institute Acronym": "ONCHIT",
+        "Full Institute/Organization Name": "Office of the National Coordinator for Health Information Technology",
+        "Wikidata": "Q7079383"
+    },
+
+    "FD": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Food and Drug Administration",
+        "Wikidata": "Q204711"
+    },
+    "BA": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Bacterial Products"
+    },
+    "BB": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Biochemistry and Biophysics"
+    },
+    "BD": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Cytokine Biology"
+    },
+    "BE": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Product Quality Control"
+    },
+    "BF": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Virology"
+    },
+    "BG": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Transfusion"
+    },
+    "BH": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Hematology"
+    },
+    "BI": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Allergenic Products and Parasitology"
+    },
+    "BJ": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Bacterial Products"
+    },
+    "BK": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Viral Products"
+    },
+    "BL": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Cytokine Biology"
+    },
+    "BM": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Cellular and Gene Therapies"
+    },
+    "BN": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Hematologic Products"
+    },
+    "BO": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Monoclonal Antibodies"
+    },
+    "BP": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center of Biologics Evaluation and Research-Transfusion Transmitted Diseases"
+    },
+    "BQ": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Hematology"
+    },
+    "BR": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Product Quality Control"
+    },
+    "BS": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Division of Biologics Standards"
+    },
+    "BT": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Immunology and Infectious Diseases"
+    },
+    "BU": {
+        "Institute Acronym": "FDA",
+        "Full Institute/Organization Name": "Center for Biologics Evaluation and Research-Clinical Pharmacology and Toxicology"
+    },
+
+    "AH": {
+        "Institute Acronym": "BHP",
+        "Full Institute/Organization Name": "Division of Associated & Dental Health Professions"
+    },
+    "DH": {
+        "Institute Acronym": "BHP",
+        "Full Institute/Organization Name": "Division of Associated & Dental Health Professions"
+    },
+    "MB": {
+        "Institute Acronym": "BHP",
+        "Full Institute/Organization Name": "Division of Disadvantaged Assistance"
+    },
+    "NU": {
+        "Institute Acronym": "BHP",
+        "Full Institute/Organization Name": "Division of Nursing"
+    },
+    "PE": {
+        "Institute Acronym": "BHP",
+        "Full Institute/Organization Name": "Division of Medicine"
+    },
+    "SA": {
+        "Institute Acronym": "BHP",
+        "Full Institute/Organization Name": "Division of Student Assistance"
+    },
+    "ST": {
+        "Institute Acronym": "OHS",
+        "Full Institute/Organization Name": "Office of Healthy Start"
+    },
+
+    "AS": {
+        "Institute Acronym": "ASC",
+        "Full Institute/Organization Name": "Administrative Services Center, OASH"
+    },
+    "FP": {
+        "Institute Acronym": "OFP",
+        "Full Institute/Organization Name": "Office of Family Planning"
+    },
+    "MP": {
+        "Institute Acronym": "OMH",
+        "Full Institute/Organization Name": "Office of Minority Health",
+        "Wikidata": "Q7079268"
+    },
+    "PG": {
+        "Institute Acronym": "OAPP",
+        "Full Institute/Organization Name": "Office of Adolescent Pregnancy Programs"
+    },
+
+    "OA": {
+        "Institute Acronym": "SAMHSA",
+        "Full Institute/Organization Name": "Office of the Administration"
+    },
+    "SP": {
+        "Institute Acronym": "CSAP",
+        "Full Institute/Organization Name": "Center for Substance Abuse Prevention",
+        "Wikidata": "Q5059883"
+    },
+    "SM": {
+        "Institute Acronym": "CMHS",
+        "Full Institute/Organization Name": "Center for Mental Health Services"
+    },
+    "SU": {
+        "Institute Acronym": "SAMHSA",
+        "Full Institute/Organization Name": "Substance Abuse and Mental Health Services Administration",
+        "Wikidata": "Q7632057"
+    },
+    "TI": {
+        "Institute Acronym": "CSAT",
+        "Full Institute/Organization Name": "Center for Substance Abuse Treatment",
+        "Wikidata": "Q5059884"
+    },
+
+    "VA": {
+        "Institute Acronym": "VA",
+        "Full Institute/Organization Name": "Department of Veterans Affairs",
+        "Wikidata": "Q592576"
+    },
+    "BX": {
+        "Institute Acronym": "BLRD",
+        "Full Institute/Organization Name": "Biomedical Laboratory Research and Development",
+        "Wikidata": "Q45135290"
+    },
+    "CU": {
+        "Institute Acronym": "CSP",
+        "Full Institute/Organization Name": "Cooperative Studies Program",
+        "Wikidata": "Q107735559"
+    },
+    "CX": {
+        "Institute Acronym": "CSRD",
+        "Full Institute/Organization Name": "Clinical Science Research and Development"
+    },
+    "HX": {
+        "Institute Acronym": "HSRD",
+        "Full Institute/Organization Name": "Health Services Research and Development",
+        "Wikidata": "Q33121956"
+    },
+    "RD": {
+        "Institute Acronym": "ORD",
+        "Full Institute/Organization Name": "Office of Research and Development",
+        "Wikidata": "Q7923618"
+    },
+    "RX": {
+        "Institute Acronym": "RRD",
+        "Full Institute/Organization Name": "Rehabilitation Research and Development",
+        "Wikidata": "Q7309751"
+    },
+
+
+
+
+    "European Union, National Operational Programme for social inclusion European Social Fund 2014-2020": {
+        "lgbtdb": "Q26206"
+    },
+    "Building Interdisciplinary Research Careers in Women's Health of the National Institutes of Health (NIH)": {
+        "lgbtdb": "Q26207"
+    },
+    "Georgia Clinical and Translational Science Alliance (GCTSA)": {
+        "lgbtdb": "Q26208",
+        "Wikidata": "Q124525907"
+    },
+    "National Center for Advancing Translational Sciences of the National Institutes of Health": {
+        "lgbtdb": "Q26209",
+        "Acronym": "TR",
+        "Institute Acronym": "NCATS",
+        "Full Institute/Organization Name": "National Center for Advancing Translational Sciences",
+        "Wikidata": "Q16932123"
+    },
+    "NIH HHS/United States": {
+        "lgbtdb": "Q26211",
+        "Acronym": "NH",
+        "Institute Acronym": "NIH",
+        "Full Institute/Organization Name": "National Institutes of Health",
+        "Wikidata": "Q390551"
+    },
+    "Chongqing Municipal Postgraduate Education Teaching Reform 2022 Project": {
+        "lgbtdb": "Q26213"
+    },
+    "Chongqing Municipal Education Science \"14th Five-Year Plan\" 2022 Key Project": {
+        "lgbtdb": "Q26214"
+    },
+    "NIAID": {
+        "lgbtdb": "Q26217",
+        "Wikidata": "Q3519875"
+    },
+    "National Center for HIV/AIDS, Viral Hepatitis, STD, and TB Prevention": {
+        "Acronym": "PS",
+        "Institute Acronym": "NCHHSTP",
+        "Full Institute/Organization Name": "National Center for HIV, Viral Hepatitis, STDs and Tuberculosis Prevention",
+        "Wikidata": "Q17008039",
+        "lgbtdb": "Q26220"
+    },
+    "Kyowa Kirin": {
+        "Wikidata": "Q6452254",
+        "lgbtdb": "Q26224"
+    },
+    "GATES": {
+        "Institute Acronym": "GATES",
+        "Wikidata": "Q26225",
+        "lgbtdb": "Q26225"
+    },
+    "Pacira BioSciences, Inc": {
+        "lgbtdb": "Q26226"
+    },
+    "Ramsay Santé": {
+        "Wikidata": "Q3123085",
+        "lgbtdb": "Q26227"
+    },
+    "Agency for Healthcare Research and Quality": {
+        "Institute Acronym": "AHRQ",
+        "Full Institute/Organization Name": "Agency for Healthcare Research and Quality",
+        "Wikidata": "Q4692008",
+        "lgbtdb": "Q26963"
+    },
+    "National Institute on Minority Health and Health Disparities,United States": {
+        "Institute Acronym": "NIMHD",
+        "Full Institute/Organization Name": "National Institute on Minority Health and Health Disparities",
+        "Wikidata": "Q6973755",
+        "lgbtdb": "Q26219"
+    }
+}

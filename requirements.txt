@@ -1,0 +1,10 @@
+biopython~=1.84
+langdetect~=1.0.9
+nltk~=3.9.1
+openpyxl~=3.1.5
+pandas~=2.2.3
+spacy~=3.8.2 
+validators~=0.34.0
+waybackpy~=3.0.6
+wikibaseintegrator~=0.12.8
+xlrd~=2.0.1

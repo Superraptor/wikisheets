@@ -1,0 +1,62 @@
+{
+    "Adolescent": {
+        "lgbtdb": "Q18024",
+        "mesh": "D000293"
+    },
+    "Adult": {
+        "lgbtdb": "Q18022",
+        "mesh": "D000328"
+    },
+    "Aged": {
+        "lgbtdb": "Q18026",
+        "mesh": "D000368"
+    },
+    "Feeding Behavior": {
+        "lgbtdb": "Q27198",
+        "mesh": "D005247"
+    },
+    "Feeding and Eating Disorders": {
+        "lgbtdb": "Q27199",
+        "mesh": "D001068"
+    },
+    "Female": {
+        "lgbtdb": "Q27200",
+        "mesh": "D005260"
+    },
+    "Hormone Replacement Therapy": {
+        "lgbtdb": "Q24918",
+        "mesh": "D020249"
+    },
+    "Humans": {
+        "lgbtdb": "Q58",
+        "mesh": "D006801"
+    },
+    "Male": {
+        "lgbtdb": "Q27201",
+        "mesh": "D008297"
+    },
+    "Middle Aged": {
+        "lgbtdb": "Q18027",
+        "mesh": "D008875"
+    },
+    "Nutritional Status": {
+        "lgbtdb": "Q27179",
+        "mesh": "D009752"
+    },
+    "Transgender Persons": {
+        "lgbtdb": "Q2492",
+        "mesh": "D063106"
+    },
+    "Young Adult": {
+        "lgbtdb": "Q18025",
+        "mesh": "D055815"
+    },
+    "epidemiology": {
+        "lgbtdb": "Q4958",
+        "mesh": "Q000453"
+    },
+    "statistics & numerical data": {
+        "lgbtdb": "Q27202",
+        "mesh": "Q000706"
+    }
+}

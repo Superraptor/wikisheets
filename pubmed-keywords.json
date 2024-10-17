@@ -1,0 +1,50 @@
+{
+    "Administrative Data": {
+        "lgbtdb": "Q27174"
+    },
+    "Affect": {
+        "lgbtdb": "Q26995"
+    },
+    "Emotion regulation": {
+        "lgbtdb": "Q26994"
+    },
+    "Epistemic Injustice": {
+        "lgbtdb": "Q27175"
+    },
+    "Ethics": {
+        "lgbtdb": "Q920"
+    },
+    "Gender diverse": {
+        "lgbtdb": "Q26993"
+    },
+    "Insurance Claim Review": {
+        "lgbtdb": "Q27176"
+    },
+    "Minority stress": {
+        "lgbtdb": "Q2978"
+    },
+    "Transgender": {
+        "lgbtdb": "Q82"
+    },
+    "Transgender Persons": {
+        "lgbtdb": "Q2492"
+    },
+    "eating behavior": {
+        "lgbtdb": "Q27178"
+    },
+    "hormone therapy": {
+        "lgbtdb": "Q1731"
+    },
+    "nutritional status": {
+        "lgbtdb": "Q27179"
+    },
+    "public health": {
+        "lgbtdb": "Q3328"
+    },
+    "systematic review": {
+        "lgbtdb": "Q27154"
+    },
+    "transgender": {
+        "lgbtdb": "Q82"
+    }
+}

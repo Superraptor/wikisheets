@@ -1,0 +1,323 @@
+{
+    "afr": {
+        "name": "Afrikaans",
+        "wikibase": "af",
+        "iso639-1": "af",
+        "lgbtdb": "Q2586",
+        "wikidata": "Q14196"
+    },
+    "alb":{
+        "name": "Albanian",
+        "wikibase": "sq",
+        "iso639-1": "sq",
+        "lgbtdb": "Q2585",
+        "wikidata": "Q8748"
+    },
+    "amh": {
+        "name": "Amharic",
+        "wikibase": "am",
+        "wikidata": "Q28244"
+    },
+    "ara": {
+        "name": "Arabic",
+        "wikibase": "ar",
+        "iso639-1": "ar",
+        "lgbtdb": "Q21117",
+        "wikidata": "Q13955"
+    },
+    "arm": {
+        "name": "Armenian",
+        "wikibase": "hy",
+        "lgbtdb": "Q2587",
+        "wikidata": "Q8785"
+    },
+    "aze": {
+        "name": "Azerbaijani",
+        "wikibase": "az",
+        "wikidata": "Q9292"
+    },
+    "bos": {
+        "name": "Bosnian",
+        "wikibase": "bs"
+    },
+    "bul": {
+        "name": "Bulgarian",
+        "wikibase": "bg",
+        "iso639-1": "bg",
+        "lgbtdb": "Q2592"
+    },
+    "cat": {
+        "name": "Catalan",
+        "wikibase": "ca",
+        "iso639-1": "ca",
+        "lgbtdb": "Q2593"
+    },
+    "chi": {
+        "name": "Chinese",
+        "wikibase": "zh",
+        "iso639-1": ["zh-cn", "zh-tw"],
+        "lgbtdb": "Q2708"
+    },
+    "cze": {
+        "name": "Czech",
+        "wikibase": "cs",
+        "iso639-1": "cs",
+        "punkt": "czech",
+        "lgbtdb": "Q2594"
+    },
+    "dan": {
+        "name": "Danish",
+        "wikibase": "da",
+        "iso639-1": "da",
+        "punkt": "danish",
+        "lgbtdb": "Q2595"
+    },
+    "dut": {
+        "name": "Dutch",
+        "wikibase": "nl",
+        "iso639-1": "nl",
+        "punkt": "dutch",
+        "lgbtdb": "Q16409"
+    },
+    "eng": {
+        "name": "English",
+        "wikibase": "en",
+        "iso639-1": "en",
+        "punkt": "english",
+        "lgbtdb": "Q2"
+    },
+    "epo": {
+        "name": "Esperanto",
+        "wikibase": "eo"
+    },
+    "est": {
+        "name": "Estonian",
+        "wikibase": "et",
+        "iso639-1": "et",
+        "punkt": "estonian"
+    },
+    "fin": {
+        "name": "Finnish",
+        "wikibase": "fi",
+        "iso639-1": "fi",
+        "punkt": "finnish"
+    },
+    "fre": {
+        "name": "French",
+        "wikibase": "fr",
+        "iso639-1": "fr",
+        "punkt": "french",
+        "lgbtdb": "Q116"
+    },
+    "geo": {
+        "name": "Georgian",
+        "wikibase": "ka"
+    },
+    "ger": {
+        "name": "German",
+        "wikibase": "de",
+        "iso639-1": "de",
+        "punkt": "german",
+        "lgbtdb": "Q118"
+    },
+    "gla": {
+        "name": "Scottish Gaelic",
+        "wikibase": "gd"
+    },
+    "gre": {
+        "name": "Greek, Modern",
+        "wikibase": "el",
+        "iso639-1": "el",
+        "punkt": "greek",
+        "lgbtdb": "Q110"
+    },
+    "heb": {
+        "name": "Hebrew",
+        "wikibase": "he",
+        "iso639-1": "he"
+    },
+    "hin": {
+        "name": "Hindi",
+        "wikibase": "hi",
+        "iso639-1": "hi"
+    },
+    "hrv": {
+        "name": "Croatian",
+        "wikibase": "hr",
+        "iso639-1": "hr"
+    },
+    "hun": {
+        "name": "Hungarian",
+        "wikibase": "hu",
+        "iso639-1": "hu"
+    },
+    "ice": {
+        "name": "Icelandic",
+        "wikibase": "is",
+        "lgbtdb": "Q13573"
+    },
+    "ind": {
+        "name": "Indonesian",
+        "wikibase": "is"
+    },
+    "ita": {
+        "name": "Italian",
+        "wikibase": "it",
+        "iso639-1": "it",
+        "punkt": "italian"
+    },
+    "jpn": {
+        "name": "Japanese",
+        "wikibase": "ja",
+        "iso639-1": "ja",
+        "lgbtdb": "Q2275"
+    },
+    "kin": {
+        "name": "Kinyarwanda",
+        "wikibase": "rw"
+    },
+    "kor": {
+        "name": "Korean",
+        "wikibase": "ko",
+        "iso639-1": "ko"
+    },
+    "lat": {
+        "name": "Latin",
+        "wikibase": "la",
+        "lgbtdb": "Q107"
+    },
+    "lav": {
+        "name": "Latvian",
+        "wikibase": "lv",
+        "iso639-1": "lv"
+    },
+    "lit": {
+        "name": "Lithuanian",
+        "wikibase": "lt",
+        "iso639-1": "lt"
+    },
+    "mac": {
+        "name": "Macedonian",
+        "wikibase": "mk",
+        "iso639-1": "mk"
+    },
+    "mal": {
+        "name": "Malayalam",
+        "wikibase": "ml",
+        "iso639-1": "ml",
+        "punkt": "malayalam"
+    },
+    "mao": {
+        "name": "Maori",
+        "wikibase": "mi"
+    },
+    "may": {
+        "name": "Malay",
+        "wikibase": "ms"
+    },
+    "mul": {
+        "name": "Multiple languages",
+        "wikibase": "mul"
+    },
+    "nor": {
+        "name": "Norwegian",
+        "wikibase": "no",
+        "iso639-1": "no",
+        "punkt": "norwegian"
+    },
+    "per": {
+        "name": "Persian, Iranian",
+        "wikibase": "fa",
+        "iso639-1": "fa"
+    },
+    "pol": {
+        "name": "Polish",
+        "wikibase": "pl",
+        "iso639-1": "pl",
+        "punkt": "polish"
+    },
+    "por": {
+        "name": "Portuguese",
+        "wikibase": "pt",
+        "iso639-1": "pt",
+        "punkt": "portuguese",
+        "lgbtdb": "Q2482"
+    },
+    "pus": {
+        "name": "Pushto",
+        "wikibase": "ps"
+    },
+    "rum": {
+        "name": "Romanian, Rumanian, Moldovan",
+        "wikibase": "ro",
+        "iso639-1": "ro"
+    },
+    "rus": {
+        "name": "Russian",
+        "wikibase": "ru",
+        "iso639-1": "ru",
+        "punkt": "russian"
+    },
+    "san": {
+        "name": "Sanskrit",
+        "wikibase": "sa"
+    },
+    "slo": {
+        "name": "Slovak",
+        "wikibase": "sk",
+        "iso639-1": "sk"
+    },
+    "slv": {
+        "name": "Slovenian",
+        "wikibase": "sl",
+        "iso639-1": "sl",
+        "punkt": "slovene"
+    },
+    "spa": {
+        "name": "Spanish",
+        "wikibase": "es",
+        "iso639-1": "es",
+        "punkt": "spanish",
+        "lgbtdb": "Q138"
+    },
+    "srp": {
+        "name": "Serbian",
+        "wikibase": "sr"
+    },
+    "swe": {
+        "name": "Swedish",
+        "wikibase": "sv",
+        "iso639-1": "sv",
+        "punkt": "swedish"
+    },
+    "tha": {
+        "name": "Thai",
+        "wikibase": "th",
+        "iso639-1": "th"
+    },
+    "tur": {
+        "name": "Turkish",
+        "wikibase": "tr",
+        "iso639-1": "tr",
+        "punkt": "turkish"
+    },
+    "ukr": {
+        "name": "Ukrainian",
+        "wikibase": "uk",
+        "iso639-1": "uk"
+    },
+    "und": {
+        "name": "Undetermined"
+    },
+    "vie": {
+        "name": "Vietnamese",
+        "wikibase": "vi",
+        "iso639-1": "vi"
+    },
+    "wel": {
+        "name": "Welsh",
+        "wikibase": "cy",
+        "iso639-1": "cy",
+        "lgbtdb": "Q18817"
+    }
+}

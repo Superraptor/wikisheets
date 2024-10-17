@@ -1,0 +1,583 @@
+{
+    "APEX Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Aerobee 150A Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 10 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 11 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 12 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 13 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 14 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 15 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 16 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 17 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 7 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 8 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo 9 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Apollo-Soyuz Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Balloon Flight": {
+        "Manned/Unmanned": "Unmanned"},	 
+    "Bion 11 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Bion Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Biosatellite 2 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Biosatellite 3 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Biosatellite Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "CRRES Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Cassini Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Chinese Satellite": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Clementine Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Consort Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 110 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 1129 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 1514 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 1667 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 1760 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 1887 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 2044 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 2229 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 368 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 557 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 573 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 605 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 613 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Cosmos 690 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 782 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos 936 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Cosmos Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "DMSP Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Discoverer 17 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Discoverer Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "EURECA Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "EUVE Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Flight Experiment": {},
+    "Foton Project": {
+        "Manned/Unmanned": "Unmanned"},
+    "GOES Project": {
+        "Manned/Unmanned": "Unmanned"},
+    "Galileo Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Giotto Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "HELIOS Project": {
+        "Manned/Unmanned": "Unmanned"}, 
+    "Hubble Telescope Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "IMP-8 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "ISS Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "IUE Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Infrared Space Obs Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "LDEF Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Lunar Prospector Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "MASER Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "MAXUS Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Mariner Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Mars Global Surveyor Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Mars Odyssey Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Mars Pathfinder Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Mercury 6 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Mercury 9 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Mercury Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Mir Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "NOAA-10 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "OFO-1(A) Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "OV1-4 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "OV3-4 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Parabolic Flight": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Phobos Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Pioneer Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Prognoz Project": {
+        "Manned/Unmanned": "Unmanned"},
+    "Project Gemini": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 11": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 12": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 4": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 5": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 7": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 8": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Project Gemini 9-A": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Russian Satellite Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "SAMPEX Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "SPOT Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "STS Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-1 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-101 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-102 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-103 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-104 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-105 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-106 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-107 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-108 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-109 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-110 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-111 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-112 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-113 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-114 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-2 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-20 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-26 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-27 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-28 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-29 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-3 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-30 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-31 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-32 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-33 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-34 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-35 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-36 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-37 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-4 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-40 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-41 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-41B Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-41C Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-41G Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-42 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-43 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-45 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-46 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-47 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-48 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-49 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-50 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51B Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51C Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51D Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51F Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51G Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-51J Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-52 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-53 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-54 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-55 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-56 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-57 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-58 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-59 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-6 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-60 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-61 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-61A Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-61B Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-61C Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-62 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-63 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-64 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-65 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-66 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-67 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-68 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-69 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-70 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-71 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-72 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-73 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-76 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-77 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-78 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-79 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-8 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-80 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-81 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-82 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-84 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-85 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-87 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-89 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-9 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-90 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-91 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-93 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-94 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-95 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-97 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "STS-98 Shuttle Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Salyut 1 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Salyut 3 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Salyut 4 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Salyut 5 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Salyut 6 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Salyut 7 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Salyut Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Shenzhou-1 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Shenzhou-2 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Shenzhou-3 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Shenzhou-4 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Skylab 2 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Skylab 3 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Skylab 4 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Skylab Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Sounding Rocket": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 10 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 11 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 12 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 13 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 14 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 16 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 17 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 18 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 19 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 20 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 21 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 22 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 24 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 26 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 27 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 28 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 29 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 30 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 31 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 32 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 35 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz 36 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 37 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 38 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 39 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 40 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 5 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 6 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 7 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 8 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz 9 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz T10 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz T11 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz T12 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz T13 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz T14 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz T4 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz T6 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz T7 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz T9 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM11 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM12 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM13 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM14 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM15 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM17 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM2 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM20 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM22 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM24 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM25 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM26 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM28 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM29 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM3 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM34 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM4 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM5 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM6 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Soyuz TM7 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyuz TM8 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Long Duration"},
+    "Soyus TMA-1 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Space Flyer Unit Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Sputnik Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "TDRS Project": {
+        "Manned/Unmanned": "Unmanned"},
+    "TEXUS Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "TIROS/NOAA Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "UOSAT-3 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Ulysses Project": {
+        "Manned/Unmanned": "Unmanned"},
+    "Vega Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Viking Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Voskhod 2 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Voskhod Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok 1 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok 2 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok 3 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok 4 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok 5 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok 6 Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Vostok Project": {
+        "Manned/Unmanned": "Manned", "Short Duration/Long Duration": "Short Duration"},
+    "Voyager Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Long Duration"},
+    "Zond 5 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Zond 6 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Zond 7 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Zond 8 Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"},
+    "Zond Project": {
+        "Manned/Unmanned": "Unmanned", "Short Duration/Long Duration": "Short Duration"}
+}

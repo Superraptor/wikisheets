@@ -1,0 +1,289 @@
+{
+    "abstract": {
+        "wikibase": "P434",
+        "abbreviation": "AB",
+        "field": "Abstract"
+    },
+    "copyright_information": {
+        "abbreviation": "CI",
+        "field": "Copyright Information"
+    },
+    "affiliation": {
+        "abbreviation": "AD",
+        "field": "Affiliation"
+    },
+    "investigator_affiliation": {
+        "abbreviation": "IRAD",
+        "field": "Investigator Affiliation"
+    },
+    "article_identifier": {
+        "abbreviation": "AID",
+        "field": "Article Identifier"
+    },
+    "author": {
+        "abbreviation": "AU",
+        "field": "Author"
+    },
+    "author_identifier": {
+        "abbreviation": "AUID",
+        "field": "Author Identifier"
+    },
+    "full_author": {
+        "abbreviation": "FAU",
+        "field": "Full Author"
+    },
+    "book_title": {
+        "abbreviation": "BTI",
+        "field": "Book Title"
+    },
+    "collection_title": {
+        "abbreviation": "CTI",
+        "field": "Collection Title"
+    },
+    "comments_corrections": {
+        "abbreviation": null,
+        "field": "Comments/Corrections"
+    },
+    "conflict_of_interest_statement": {
+        "abbreviation": "COIS",
+        "field": "Conflict of Interest Statement"
+    },
+    "corporate_author": {
+        "abbreviation": "CN",
+        "field": "Corporate Author"
+    },
+    "create_date": {
+        "abbreviation": "CRDT",
+        "field": "Create Date"
+    },
+    "date_completed": {
+        "abbreviation": "DCOM",
+        "field": "Date Completed",
+        "entrez": "DateCompleted"
+    },
+    "date_created": {
+        "abbreviation": "DA",
+        "field": "Date Created"
+    },
+    "date_last_revised": {
+        "abbreviation": "LR",
+        "field": "Date Last Revised",
+        "entrez": "DateRevised"
+    },
+    "date_of_electronic_publication": {
+        "abbreviation": "DEP",
+        "field": "Date of Electronic Publication"
+    },
+    "date_of_publication": {
+        "abbreviation": "DP",
+        "field": "Date of Publication"
+    },
+    "edition": {
+        "abbreviation": "EN",
+        "field": "Edition"
+    },
+    "editor": {
+        "abbreviation": "ED",
+        "field": "Editor"
+    },
+    "full_editor_name": {
+        "abbreviation": "FED",
+        "field": "Full Editor Name"
+    },
+    "entrez_date": {
+        "abbreviation": "EDAT",
+        "field": "Entrez Date"
+    },
+    "full_personal_name_as_subject": {
+        "abbreviation": "FPS",
+        "field": "Full Personal Name as Subject"
+    },
+    "gene_symbol": {
+        "abbreviation": "GS",
+        "field": "Gene Symbol"
+    },
+    "general_note": {
+        "abbreviation": "GN",
+        "field": "General Note",
+        "entrez": "GeneralNote"
+    },
+    "grant_number": {
+        "abbreviation": "GR",
+        "field": "Grant Number"
+    },
+    "investigator_list": {
+        "entrez": "InvestigatorList"
+    },
+    "investigator_name": {
+        "abbreviation": "IR",
+        "field": "Investigator Name"
+    },
+    "full_investigator_name": {
+        "abbreviation": "FIR",
+        "field": "Full Investigator Name"
+    },
+    "isbn": {
+        "abbreviation": "ISBN",
+        "field": "ISBN"
+    },
+    "issn": {
+        "abbreviation": "IS",
+        "field": "ISSN",
+        "entrez": "ISSN"
+    },
+    "issue": {
+        "abbreviation": "IP",
+        "field": "Issue"
+    },
+    "journal_title_abbreviation": {
+        "abbreviation": "TA",
+        "field": "Journal Title Abbreviation"
+    },
+    "journal_title": {
+        "abbreviation": "JT",
+        "field": "Journal Title"
+    },
+    "keyword_list": {
+        "entrez": "KeywordList"
+    },
+    "language": {
+        "abbreviation": "LA",
+        "field": "Language"
+    },
+    "location_identifier": {
+        "abbreviation": "LID",
+        "field": "Location Identifier",
+        "entrez": "ELocationID"
+    },
+    "manuscript_identifier": {
+        "abbreviation": "MID",
+        "field": "Manuscript Identifier"
+    },
+    "mesh_date": {
+        "abbreviation": "MHDA",
+        "field": "MeSH Date"
+    },
+    "mesh_terms": {
+        "abbreviation": "MH",
+        "field": "MeSH Terms"
+    },
+    "nlm_unique_id": {
+        "abbreviation": "JID",
+        "field": "NLM Unique ID"
+    },
+    "number_of_references": {
+        "abbreviation": "RF",
+        "field": "Number of References"
+    },
+    "other_abstract": {
+        "abbreviation": "OAB",
+        "field": "Other Abstract",
+        "entrez": "OtherAbstract"
+    },
+    "other_copyright_information": {
+        "abbreviation": "OCI",
+        "field": "Other Copyright Information"
+    },
+    "other_id": {
+        "abbreviation": "OID",
+        "field": "Other ID",
+        "entrez": "OtherID"
+    },
+    "other_term": {
+        "abbreviation": "OT",
+        "field": "Other Term"
+    },
+    "other_term_owner": {
+        "abbreviation": "OTO",
+        "field": "Other Term Owner"
+    },
+    "owner": {
+        "abbreviation": "OWN",
+        "field": "Owner"
+    },
+    "pagination": {
+        "abbreviation": "PG",
+        "field": "Pagination"
+    },
+    "personal_name_as_subject": {
+        "abbreviation": "PS",
+        "field": "Personal Name as Subject"
+    },
+    "place_of_publication": {
+        "abbreviation": "PL",
+        "field": "Place of Publication"
+    },
+    "publication_history_status": {
+        "abbreviation": "PHST",
+        "field": "Publication History Status"
+    },
+    "publication_status": {
+        "abbreviation": "PST",
+        "field": "Publication Status"
+    },
+    "publication_type": {
+        "abbreviation": "PT",
+        "field": "Publication Type"
+    },
+    "publishing_model": {
+        "abbreviation": "PUBM",
+        "field": "Publishing Model"
+    },
+    "pubmed_central_identifier": {
+        "abbreviation": "PMC",
+        "field": "PubMed Central Identifier"
+    },
+    "pubmed_central_release": {
+        "abbreviation": "PMCR",
+        "field": "PubMed Central Release"
+    },
+    "pubmed_unique_identifier": {
+        "abbreviation": "PMID",
+        "field": "PubMed Unique Identifier"
+    },
+    "registry_number_ec_number": {
+        "abbreviation": "RN",
+        "field": "Registry Number/EC Number"
+    },
+    "substance_name": {
+        "abbreviation": "NM",
+        "field": "Substance Name"
+    },
+    "secondary_source_id": {
+        "abbreviation": "SI",
+        "field": "Secondary Source ID"
+    },
+    "source": {
+        "abbreviation": "SO",
+        "field": "Source"
+    },
+    "space_flight_mission": {
+        "abbreviation": "SFM",
+        "field": "Space Flight Mission"
+    },
+    "status": {
+        "abbreviation": "STAT",
+        "field": "Status"
+    },
+    "subset": {
+        "abbreviation": "SB",
+        "field": "Subset",
+        "entrez": "CitationSubset"
+    },
+    "title": {
+        "abbreviation": "TI",
+        "field": "Title"
+    },
+    "transliterated_title": {
+        "abbreviation": "TT",
+        "field": "Transliterated Title"
+    },
+    "volume": {
+        "abbreviation": "VI",
+        "field": "Volume"
+    },
+    "volume_title": {
+        "abbreviation": "VTI",
+        "field": "Volume Title"
+    }
+}

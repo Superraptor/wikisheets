@@ -1,0 +1,78 @@
+{
+    "AIM": {
+        "value": "AIM",
+        "lgbtdb": "Q26969",
+        "definition": "citations from Abridged Index Medicus journals, a list of about 120 core clinical, English language journals."},
+    "B": {
+        "value": "B",
+        "lgbtdb": "Q26970",
+        "definition": "citations from non-Index Medicus journals in the field of biotechnology (not currently used)."},
+    "C": {
+        "value": "C",
+        "lgbtdb": "Q26971",
+        "definition": "citations from non-Index Medicus journals in the field of communication disorders (not currently used)."},
+    "D": {
+        "value": "D",
+        "lgbtdb": "Q26972",
+        "definition": "citations from dental journals. See the current list under Dentistry and Orthodontics."},
+    "E": {
+        "value": "E",
+        "lgbtdb": "Q26973",
+        "definition": "citations in the field of bioethics. (includes records from the former BIOETHICSLINE database)"},
+    "F": {
+        "value": "F",
+        "lgbtdb": "Q26974",
+        "definition": "older citations from one journal prior to its selection for Index Medicus. Used to augment the database for NLM's International MEDLARS Centers (not currently used)."},
+    "H": {
+        "value": "H",
+        "lgbtdb": "Q26975",
+        "definition": "citations from non-Index Medicus journals in the field of health administration. (includes records from the former HealthSTAR database)"},
+    "IM": {
+        "value": "IM",
+        "lgbtdb": "Q26976",
+        "definition": "citations from Index Medicus journals."},
+    "J": {
+        "value": "J",
+        "lgbtdb": "Q26977",
+        "definition": "citations in the field of population information. (not currently used; on records from the former POPLINE® database)"},
+    "K": {
+        "value": "K",
+        "lgbtdb": "Q26978",
+        "definition": "citations from non-Index Medicus journals relating to consumer health."},
+    "N": {
+        "value": "N",
+        "lgbtdb": "Q26979",
+        "definition": "citations from nursing journals. See the current list under Nursing."},
+    "OM": {
+        "value": "OM",
+        "lgbtdb": "Q26980",
+        "definition": "citations from the OLDMEDLINE project that originated from the Cumulated Index Medicus and the Current List of Medical Literature (in 2008 this includes citations from the 1949-1965 print indexes). The ways they differ from other MEDLINE records are documented under the applicable element descriptions. The original MeSH Headings assigned at the time the citation was created in print reside in the Other Term field. Records in the OLDMEDLINE subset have a status of OLDMEDLINE until all of their original subject terms are mapped to current MeSH; then their status changes to MEDLINE. NLM makes available both new and revised OLDMEDLINE records on an irregular and infrequent basis."},
+    "Q": {
+        "value": "Q",
+        "lgbtdb": "Q26981",
+        "definition": "citations in the field of the history of medicine. (includes records from the former HISTLINE® database)"},
+    "QIS": {
+        "value": "QIS",
+        "lgbtdb": "Q26982",
+        "definition": "citations from non-Index Medicus journals in the field of the history of medicine. (For NLM use effective in late 2006 because they require special handling at NLM; not a subset of Q; some journals previously designated as Q are now QIS.)"},
+    "QO": {
+        "value": "QO",
+        "lgbtdb": "Q26983",
+        "definition": "is subset of Q - indicates older history of medicine journal citations that were created before the former HISTLINE file was converted to a MEDLINE-like format. (For NLM use because they require special handling at NLM)."},
+    "R": {
+        "value": "R",
+        "lgbtdb": "Q26984",
+        "definition": "citations from non-Index Medicus journals in the field of population and reproduction (not currently used)."},
+    "S": {
+        "value": "S",
+        "lgbtdb": "Q26985",
+        "definition": "citations in the field of space life sciences. (includes records from the former SPACELINE™ database)"},
+    "T": {
+        "value": "T",
+        "lgbtdb": "Q26986",
+        "definition": "citations from non-Index Medicus journals in the field of health technology assessment. (includes records from the former HealthSTAR database)"},
+    "X": {
+        "value": "X",
+        "lgbtdb": "Q26987",
+        "definition": "citations in the field of AIDS/HIV. (includes records from the former AIDSLINE® database)"}
+}

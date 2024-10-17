@@ -1,0 +1,10 @@
+qrh-coverage.xls
+wikibase-properties.json
+wikibase-config.json
+wikibase-wikidata-mapping.json
+equivalence_mappings.json
+homosaurus_matching.py
+*-wikibase-mapping.json
+project.yaml
+pubmed_*.json
+wikidata-manifest.json
