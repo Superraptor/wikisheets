@@ -14,6 +14,7 @@ import constants
 import json
 import nltk.data
 import re
+import textwrap
 import yaml
 
 # Read in YAML file.
@@ -21,12 +22,17 @@ yaml_dict=yaml.safe_load(Path("project.yaml").read_text())
 
 wikibase_name = yaml_dict['wikibase']['wikibase_name']
 
+wikibase_str_text_limit = 400
+
 #
 #   DATA DICTIONARIES
 #
 
 with open(constants.LA_mapping_file, 'r') as f:
     language_json = json.load(f)
+
+with open(constants.AbstractType_mapping_file, 'r') as f:
+    abstracttype_json = json.load(f)
 
 with open(constants.NlmCategory_mapping_file, 'r') as f:
     nlmcategory_json = json.load(f)
@@ -38,33 +44,48 @@ with open(constants.NlmCategory_mapping_file, 'r') as f:
 # AB: Abstract
 def process_abstract(entrez_obj, abstract_obj):
 
+    copyright_information = None
     if 'CopyrightInformation' in abstract_obj:
+        print("Part 1")
         copyright_information = abstract_copyright(entrez_obj, abstract_obj)
+        print(copyright_information)
 
     if determine_if_list_abstract(abstract_obj):
+        print("Part 2")
         processed_abstract = process_list_abstract(abstract_obj)
 
     elif determine_if_str_abstract(abstract_obj):
+        print("Part 3")
         processed_abstract = process_str_abstract(abstract_obj)
 
     else:
+        print("HERE")
         print(type(abstract_obj))
+        print(abstract_obj)
         exit()
 
-    print(process_abstract)
+    if copyright_information:
+        for counter, abstract_part in enumerate(processed_abstract):
+            for copyright_info_id, copyright_info_dict in copyright_information.items():
+                processed_abstract[counter][copyright_info_id] = copyright_info_dict
+    
     return processed_abstract
 
 def process_list_abstract(abstract_obj):
     if determine_if_structured(abstract_obj):
+        print("Part2.1")
         processed_abstract_obj = process_list_sentences_structured(abstract_obj)
     else:
+        print("Part2.2")
         processed_abstract_obj = process_list_sentences_unstructured(abstract_obj)
     return processed_abstract_obj
 
 def process_str_abstract(abstract_obj):
     if determine_if_structured(abstract_obj):
+        print("Part3.1")
         processed_abstract_obj = process_str_sentences_structured(abstract_obj)
     else:
+        print("Part3.2")
         processed_abstract_obj = process_str_sentences_unstructured(abstract_obj)
     return processed_abstract_obj
 
@@ -75,18 +96,24 @@ def process_list_sentences_structured(abstract_obj, processed_abstract_obj=None)
     if processed_abstract_obj is None:
         processed_abstract_obj = []
 
+    print(abstract_obj)
     sentence_counter = 1
     wikibase_lang = abstract_lang(abstract_obj)
     tokenizer = determine_tokenizer(abstract_obj)
     truncated = determine_if_truncated(abstract_obj)
+    type_of_abstract = abstract_type(abstract_obj)
 
     if len(abstract_obj['AbstractText']) > 1:
+        print("Part2.1.1")
         for abstract_part in abstract_obj['AbstractText']:
             heading_nlm_category = abstract_heading_nlm_category(abstract_part)
-            heading_label = abstract_heading_nlm_category(abstract_part)
+            heading_label = abstract_heading_label(abstract_part)
             sentences = tokenizer.tokenize(abstract_part)
 
             for sentence in sentences:
+                if len(sentence) > wikibase_str_text_limit:
+                    sentence = textwrap.shorten(sentence, width=wikibase_str_text_limit)
+
                 processed_abstract_sentence_obj = {
                     "value": sentence,
                     "language": wikibase_lang,
@@ -96,10 +123,16 @@ def process_list_sentences_structured(abstract_obj, processed_abstract_obj=None)
                 }
                 if truncated:
                     processed_abstract_sentence_obj["P790"] = truncated
+                if type_of_abstract is not None:
+                    processed_abstract_sentence_obj["P816"] = type_of_abstract
                 processed_abstract_obj.append(processed_abstract_sentence_obj)
                 sentence_counter += 1
+
+        print("Part2.1.2")
     else:
+        print("Part2.1.3")
         processed_abstract_obj = process_str_sentences_structured(abstract_obj)
+        print("Part2.1.4")
 
     return processed_abstract_obj
 
@@ -114,6 +147,7 @@ def process_str_sentences_structured(abstract_obj, processed_abstract_obj=None):
     processed_headings = abstract_headings(abstract_obj, unprocessed=False)
     tokenizer = determine_tokenizer(abstract_obj)
     truncated = determine_if_truncated(abstract_obj)
+    type_of_abstract = abstract_type(abstract_obj)
 
     print(unprocessed_headings)
 
@@ -147,6 +181,9 @@ def process_str_sentences_structured(abstract_obj, processed_abstract_obj=None):
         print(sentences)
 
         for sentence in sentences:
+            if len(sentence) > wikibase_str_text_limit:
+                sentence = textwrap.shorten(sentence, width=wikibase_str_text_limit)
+
             processed_abstract_sentence_obj = {
                 "value": sentence,
                 "language": wikibase_lang,
@@ -155,6 +192,8 @@ def process_str_sentences_structured(abstract_obj, processed_abstract_obj=None):
             }
             if truncated:
                 processed_abstract_sentence_obj["P790"] = truncated
+            if type_of_abstract is not None:
+                processed_abstract_sentence_obj["P816"] = type_of_abstract
             processed_abstract_obj.append(processed_abstract_sentence_obj)
             sentence_counter += 1
 
@@ -172,9 +211,13 @@ def process_str_sentences_unstructured(abstract_obj, processed_abstract_obj=None
     wikibase_lang = abstract_lang(abstract_obj)
     tokenizer = determine_tokenizer(abstract_obj)
     truncated = determine_if_truncated(abstract_obj)
+    type_of_abstract = abstract_type(abstract_obj)
 
     sentences = tokenizer.tokenize(abstract_str)
     for sentence in sentences:
+        if len(sentence) > wikibase_str_text_limit:
+            sentence = textwrap.shorten(sentence, width=wikibase_str_text_limit)
+
         processed_abstract_sentence_obj = {
             "value": sentence,
             "language": wikibase_lang,
@@ -182,6 +225,8 @@ def process_str_sentences_unstructured(abstract_obj, processed_abstract_obj=None
         }
         if truncated:
             processed_abstract_sentence_obj["P790"] = truncated
+        if type_of_abstract is not None:
+            processed_abstract_sentence_obj["P816"] = type_of_abstract
         processed_abstract_obj.append(processed_abstract_sentence_obj)
         sentence_counter += 1
 
@@ -194,21 +239,32 @@ def process_str_sentences_unstructured(abstract_obj, processed_abstract_obj=None
 def abstract_text(abstract_obj):
     if determine_if_list_abstract(abstract_obj):
         if len(abstract_obj['AbstractText']) > 1:
-            return str(" ".join(str(abstract_obj['AbstractText'])))
+            return str(" ".join(abstract_obj['AbstractText']))
         else:
             return str(abstract_obj['AbstractText'][0])        
     else:
         return str(abstract_obj['AbstractText'])
 
 def abstract_type(abstract_obj):
-    abstract_type = None
+    abstract_type_str = None
     try:
-        abstract_type = abstract_obj.attributes['Type']
+        abstract_type_str = abstract_obj.attributes['Type']
     except KeyError:
         pass
     except AttributeError:
         pass
-    return abstract_type
+
+    wikibase_abstract_type = None
+    if abstract_type_str is not None:
+        try:
+            wikibase_abstract_type = abstracttype_json[abstract_type_str][wikibase_name]
+        except KeyError:
+            if abstract_type_str not in abstracttype_json:
+                abstracttype_json[abstract_type_str] = {}
+            new_match = add_to_mapping_file(abstract_type_str)
+            return abstract_type(abstract_obj)
+
+    return wikibase_abstract_type
 
 def abstract_lang(abstract_obj):
     abstract_lang = None
@@ -223,6 +279,9 @@ def abstract_lang(abstract_obj):
         detected_language = detect(abstract_text(abstract_obj))
     else:
         detected_language = abstract_lang
+
+    print(abstract_text(abstract_obj))
+    print(detected_language)
 
     wikibase_lang = None
     for LA, LA_dict in language_json.items():
@@ -268,12 +327,12 @@ def abstract_headings(abstract_obj, unprocessed=True):
         abstract_text_str = abstract_text(abstract_obj)
         if unprocessed:
             if '<b>' in abstract_text_str:
-                heading_regex = re.compile('(<b>)([A-Za-z/]{1,20})(</b>)(\: )')
+                heading_regex = re.compile('(<b>)([A-Za-zÀ-Üà-ü/]{1,20})(</b>)(\: )')
             else:
                 heading_regex = re.compile('((\^)|(\.{0,1}\n{0,2}))([\w ]{1,})(\: )')
         else:
             if '<b>' in abstract_text_str:
-                heading_regex = re.compile('(<b>)([A-Za-z/]{1,20})(</b>)(\: )')
+                heading_regex = re.compile('(<b>)([A-Za-zÀ-Üà-ü/]{1,20})(</b>)(\: )')
             else:
                 heading_regex = re.compile('((\^)|(\.{0,1}\n{0,2}))([\w ]{1,})(\: )')
         full_headings_found_pre = re.findall(heading_regex, str(abstract_text_str))
@@ -384,3 +443,12 @@ def determine_tokenizer(abstract_obj):
         exit()
 
     return nltk.data.load('tokenizers/punkt/%s.pickle' % punkt)
+
+def add_to_mapping_file(abstract_type):
+    new_match = input('What is the QID that matches the abstract type "%s"?\n' % (str(abstract_type)))
+    abstracttype_json[str(abstract_type)][wikibase_name] = new_match.strip()
+
+    with open(constants.AbstractType_mapping_file, 'w') as f:
+        json.dump(abstracttype_json, f, indent=4, sort_keys=True)
+
+    return new_match

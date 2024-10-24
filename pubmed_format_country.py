@@ -21,5 +21,22 @@ with open(constants.PL_mapping_file, 'r') as f:
     countries_json = json.load(f)
 
 def process_country(country_str):
-    print(country_str)
-    return countries_json[country_str][wikibase_name]
+    wikibase_qid = None
+    try:
+        wikibase_qid = countries_json[country_str][wikibase_name]
+    except KeyError:
+        wikibase_qid = add_to_mapping_file(country_str)
+        process_country(country_str)
+    if wikibase_qid is None:
+        print(country_str)
+        exit()
+    return wikibase_qid
+
+def add_to_mapping_file(country_str):
+    new_match = input('What is the QID that matches the country "%s"?\n' % (str(country_str)))
+    countries_json[str(country_str)][wikibase_name] = new_match.strip()
+
+    with open(constants.PL_mapping_file, 'w') as f:
+        json.dump(countries_json, f, indent=4, sort_keys=True)
+
+    return new_match

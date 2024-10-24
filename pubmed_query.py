@@ -31,7 +31,7 @@ def main():
     parser.add_argument('-q', type=str, required=False, help='The query string to search using.')
     args=parser.parse_args()
 
-    download_pubmed_metadata(args.q, max_results=5)
+    download_pubmed_metadata(args.q, max_results=10)
 
 # Step 1: Query PubMed and download metadata
 def download_pubmed_metadata(keyword, mesh=True, max_results=100, use_existing_pmids=True):

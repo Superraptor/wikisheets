@@ -11,6 +11,50 @@
         "lgbtdb": "Q18026",
         "mesh": "D000368"
     },
+    "Anti-HIV Agents": {
+        "lgbtdb": "Q330",
+        "mesh": "D019380"
+    },
+    "Argentina": {
+        "lgbtdb": "Q25888",
+        "mesh": "D001118"
+    },
+    "Attitude of Health Personnel": {
+        "lgbtdb": "Q27391",
+        "mesh": "D001291"
+    },
+    "Biomarkers": {
+        "lgbtdb": "Q27315",
+        "mesh": "D015415"
+    },
+    "Brazil": {
+        "lgbtdb": "Q24832",
+        "mesh": "D001938"
+    },
+    "Breast Feeding": {
+        "lgbtdb": "Q4430",
+        "mesh": "D001942"
+    },
+    "CD4 Lymphocyte Count": {
+        "lgbtdb": "Q598",
+        "mesh": "D018791"
+    },
+    "COVID-19": {
+        "lgbtdb": "Q14720",
+        "mesh": "D000086382"
+    },
+    "California": {
+        "lgbtdb": "Q11578",
+        "mesh": "D002140"
+    },
+    "Condoms": {
+        "lgbtdb": "Q723",
+        "mesh": "D017280"
+    },
+    "Cross-Sectional Studies": {
+        "lgbtdb": "Q17032",
+        "mesh": "D003430"
+    },
     "Feeding Behavior": {
         "lgbtdb": "Q27198",
         "mesh": "D005247"
@@ -23,40 +67,240 @@
         "lgbtdb": "Q27200",
         "mesh": "D005260"
     },
+    "Gender Dysphoria": {
+        "lgbtdb": "Q1459",
+        "mesh": "D000068116"
+    },
+    "Gender-Affirming Care": {
+        "lgbtdb": "Q17022",
+        "mesh": "D000097962"
+    },
+    "HIV Infections": {
+        "lgbtdb": "Q1636",
+        "mesh": "D015658"
+    },
+    "HIV Testing": {
+        "lgbtdb": "Q27362",
+        "mesh": "D000082922"
+    },
+    "Health Knowledge, Attitudes, Practice": {
+        "lgbtdb": "Q16931",
+        "mesh": "D007722"
+    },
+    "Health Personnel": {
+        "lgbtdb": "Q27392",
+        "mesh": "D006282"
+    },
+    "Healthcare Disparities": {
+        "lgbtdb": "Q27335",
+        "mesh": "D054625"
+    },
+    "Hepatitis A": {
+        "lgbtdb": "Q27314",
+        "mesh": "D006506"
+    },
+    "Hepatitis B": {
+        "lgbtdb": "Q9382",
+        "mesh": "D006509"
+    },
+    "Hepatitis C": {
+        "lgbtdb": "Q17028",
+        "mesh": "D006526"
+    },
+    "Hepatitis, Viral, Human": {
+        "lgbtdb": "Q27316",
+        "mesh": "D006525"
+    },
+    "Homosexuality, Male": {
+        "lgbtdb": "Q2831",
+        "mesh": "D018451"
+    },
     "Hormone Replacement Therapy": {
         "lgbtdb": "Q24918",
         "mesh": "D020249"
+    },
+    "Hospitals, Public": {
+        "lgbtdb": "Q27296",
+        "mesh": "D006779"
     },
     "Humans": {
         "lgbtdb": "Q58",
         "mesh": "D006801"
     },
+    "Incidence": {
+        "lgbtdb": "Q5369",
+        "mesh": "D015994"
+    },
+    "Interviews as Topic": {
+        "lgbtdb": "Q27381",
+        "mesh": "D007407"
+    },
     "Male": {
         "lgbtdb": "Q27201",
         "mesh": "D008297"
+    },
+    "Masculinity": {
+        "lgbtdb": "Q2895",
+        "mesh": "D057228"
+    },
+    "Mental Health Services": {
+        "lgbtdb": "Q2948",
+        "mesh": "D008605"
     },
     "Middle Aged": {
         "lgbtdb": "Q18027",
         "mesh": "D008875"
     },
+    "Military Personnel": {
+        "lgbtdb": "Q23197",
+        "mesh": "D008889"
+    },
+    "Nurse Clinicians": {
+        "lgbtdb": "Q27334",
+        "mesh": "D009720"
+    },
     "Nutritional Status": {
         "lgbtdb": "Q27179",
         "mesh": "D009752"
+    },
+    "Pandemics": {
+        "lgbtdb": "Q4957",
+        "mesh": "D058873"
+    },
+    "Patient Acceptance of Health Care": {
+        "lgbtdb": "Q27364",
+        "mesh": "D010342"
+    },
+    "Perception": {
+        "lgbtdb": "Q27393",
+        "mesh": "D010465"
+    },
+    "Physicians, Primary Care": {
+        "lgbtdb": "Q5011",
+        "mesh": "D058007"
+    },
+    "Practice Patterns, Physicians'": {
+        "lgbtdb": "Q27403",
+        "mesh": "D010818"
+    },
+    "Pre-Exposure Prophylaxis": {
+        "lgbtdb": "Q17012",
+        "mesh": "D065129"
+    },
+    "Prevalence": {
+        "lgbtdb": "Q27282",
+        "mesh": "D015995"
+    },
+    "Prospective Studies": {
+        "lgbtdb": "Q27279",
+        "mesh": "D011446"
+    },
+    "Qualitative Research": {
+        "lgbtdb": "Q16855",
+        "mesh": "D036301"
+    },
+    "Retrospective Studies": {
+        "lgbtdb": "Q27295",
+        "mesh": "D012189"
+    },
+    "Risk Factors": {
+        "lgbtdb": "Q27280",
+        "mesh": "D012307"
+    },
+    "SARS-CoV-2": {
+        "lgbtdb": "Q27363",
+        "mesh": "D000086402"
+    },
+    "Self-Testing": {
+        "lgbtdb": "Q27361",
+        "mesh": "D000085263"
+    },
+    "Sexual Behavior": {
+        "lgbtdb": "Q16863",
+        "mesh": "D012725"
+    },
+    "Sexual and Gender Minorities": {
+        "lgbtdb": "Q16834",
+        "mesh": "D000072339"
+    },
+    "Social Theory": {
+        "lgbtdb": "Q27438",
+        "mesh": "D066269"
+    },
+    "Socioeconomic Factors": {
+        "lgbtdb": "Q27281",
+        "mesh": "D012959"
+    },
+    "Surveys and Questionnaires": {
+        "lgbtdb": "Q27404",
+        "mesh": "D011795"
     },
     "Transgender Persons": {
         "lgbtdb": "Q2492",
         "mesh": "D063106"
     },
+    "United States": {
+        "lgbtdb": "Q94",
+        "mesh": "D014481"
+    },
+    "Unsafe Sex": {
+        "lgbtdb": "Q4037",
+        "mesh": "D047568"
+    },
+    "Viral Load": {
+        "lgbtdb": "Q4068",
+        "mesh": "D019562"
+    },
     "Young Adult": {
         "lgbtdb": "Q18025",
         "mesh": "D055815"
+    },
+    "administration & dosage": {
+        "lgbtdb": "Q27378",
+        "mesh": "Q000008"
+    },
+    "blood": {
+        "lgbtdb": "Q9878",
+        "mesh": "Q000097"
+    },
+    "diagnosis": {
+        "lgbtdb": "Q19637",
+        "mesh": "Q000175"
+    },
+    "education": {
+        "lgbtdb": "Q863",
+        "mesh": "Q000193"
     },
     "epidemiology": {
         "lgbtdb": "Q4958",
         "mesh": "Q000453"
     },
+    "methods": {
+        "lgbtdb": "Q27377",
+        "mesh": "Q000379"
+    },
+    "organization & administration": {
+        "lgbtdb": "Q27448",
+        "mesh": "Q000458"
+    },
+    "prevention & control": {
+        "lgbtdb": "Q27283",
+        "mesh": "Q000517"
+    },
+    "psychology": {
+        "lgbtdb": "Q3311",
+        "mesh": "Q000523"
+    },
     "statistics & numerical data": {
         "lgbtdb": "Q27202",
         "mesh": "Q000706"
+    },
+    "therapeutic use": {
+        "lgbtdb": "Q27379",
+        "mesh": "Q000627"
+    },
+    "therapy": {
+        "lgbtdb": "Q27449",
+        "mesh": "Q000628"
     }
 }

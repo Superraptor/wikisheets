@@ -10,6 +10,7 @@ from langdetect import detect
 from pathlib import Path
 from pubmed_format_affiliation import check_if_affiliation_exists
 from pubmed_format_author import check_if_author_exists
+from pubmed_format_language import process_languages, return_wikibase_mapping
 from wikidata_mapping import get_wikidata_id
 
 import constants
@@ -42,15 +43,36 @@ def process_copyright_information(entrez_obj, copyright_object, from_abstract=Fa
     copyright_info_obj = {}
 
     if isinstance(copyright_object, str):
-        copyright_info_obj['P831'] = str(copyright_object)
+        copyright_info_obj['P831'] = {
+            'value': str(copyright_object.strip()),
+        }
+
+        languages = process_languages(entrez_obj['Article']['Language'])
+        if len(languages) > 1:
+            wikibase_language = []
+            for language in languages:
+                wikibase_language.append(return_wikibase_mapping(language))
+        else:
+            wikibase_language = return_wikibase_mapping(languages[0])
+
+        if len(languages) > 1:
+            detected_lang = detect_language(str(copyright_object))
+            copyright_info_obj['P831']['language'] = detected_lang
+        else:
+            copyright_info_obj['P831']['language'] = wikibase_language
+        
         contains_publisher_info = determine_if_publisher_information(copyright_object)
         contains_copyright_info = determine_if_copyright_information(copyright_object)
 
         if contains_publisher_info:
             publisher_info = process_publisher_info(copyright_object)
+            for publisher_info_id, publisher_info_dict in publisher_info.items():
+                copyright_info_obj[publisher_info_id] = publisher_info_dict
         
         if contains_copyright_info:
             copyright_info = process_copyright(entrez_obj, copyright_object)
+            for copyright_info_id, copyright_info_dict in copyright_info.items():
+                copyright_info_obj[copyright_info_id] = copyright_info_dict
         
         if contains_publisher_info is False and contains_copyright_info is False:
             if copyright_object == entrez_obj['Article']['Abstract']['CopyrightInformation']:
@@ -101,7 +123,6 @@ def process_copyright_holder(entrez_obj, copyright_str):
     processed_copyright_holder_list = []
     
     if 'author' in copyright_str.lower() or 'authors' in copyright_str.lower():
-        copyright_holders = []
         for author in entrez_obj['Article']['AuthorList']:
             match_id = check_if_author_exists(author)
             if match_id:
@@ -137,6 +158,7 @@ def process_copyright_holder(entrez_obj, copyright_str):
                                             authors_json[full_name_with_counter]['wikidata'] = wikidata_id
                             except AttributeError:
                                 pass
+                    
                     with open('pubmed-authors.json', 'w') as f:
                         json.dump(authors_json, f, indent=4, sort_keys=True)
                     exit()
@@ -156,6 +178,14 @@ def process_copyright_holder(entrez_obj, copyright_str):
                 with open('pubmed-affiliation-mappings.json', 'w') as f:
                     json.dump(affiliations_json, f, indent=4, sort_keys=True)
                 exit()
+        else:
+            if copyright_holder_str in affiliations_json:
+                processed_copyright_holder_list.append(affiliations_json[copyright_holder_str][wikibase_name])
+            else:
+                affiliations_json[copyright_holder_str] = {}
+                affiliations_json[copyright_holder_str][wikibase_name] = copyright_holder_id
+                with open('pubmed-affiliation-mappings.json', 'w') as f:
+                    json.dump(affiliations_json, f, indent=4, sort_keys=True)
 
     return processed_copyright_holder_list
 
@@ -242,3 +272,18 @@ def determine_if_copyright_information(copyright_str):
         return True
     else:
         return False
+    
+def detect_language(str):
+    detected_language = detect(str)
+
+    wikibase_lang = None
+    for LA, LA_dict in language_json.items():
+        if "iso639-1" in LA_dict:
+            if LA_dict["iso639-1"] == detected_language:
+                punkt = LA_dict["punkt"]
+                wikibase_lang = LA_dict["wikibase"]
+            elif LA == detected_language:
+                punkt = LA_dict["punkt"]
+                wikibase_lang = LA_dict["wikibase"]
+
+    return wikibase_lang

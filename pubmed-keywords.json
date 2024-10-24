@@ -14,14 +14,32 @@
     "Ethics": {
         "lgbtdb": "Q920"
     },
+    "Gender Affirming Hormone Therapy": {
+        "lgbtdb": "Q27405"
+    },
+    "Gender Diverse": {
+        "lgbtdb": "Q26993"
+    },
+    "Gender Health": {
+        "lgbtdb": "Q27406"
+    },
     "Gender diverse": {
         "lgbtdb": "Q26993"
     },
     "Insurance Claim Review": {
         "lgbtdb": "Q27176"
     },
+    "Medical Training": {
+        "lgbtdb": "Q27407"
+    },
     "Minority stress": {
         "lgbtdb": "Q2978"
+    },
+    "Nonbinary": {
+        "lgbtdb": "Q2521"
+    },
+    "Primary Care": {
+        "lgbtdb": "Q27408"
     },
     "Transgender": {
         "lgbtdb": "Q82"
@@ -31,6 +49,9 @@
     },
     "eating behavior": {
         "lgbtdb": "Q27178"
+    },
+    "gender affirmation": {
+        "lgbtdb": "Q23092"
     },
     "hormone therapy": {
         "lgbtdb": "Q1731"

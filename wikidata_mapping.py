@@ -80,14 +80,14 @@ def get_wikidata_id(identifier, id_type="PubMed"):
         if response.status_code == 200:
             data = response.json()
             if data['results']['bindings']:
-                id_dict[identifier] = ((data['results']['bindings'][0]['wikidataID']['value']).rsplit('/'))[1]
+                id_dict[identifier] = (data['results']['bindings'][0]['wikidataID']['value']).rsplit('/', 1)[-1]
                 with open(file_name, 'w') as f:
-                    json.dump(id_dict, f)
-                return data['results']['bindings'][0]['wikidataID']['value']
+                    json.dump(id_dict, f, indent=4, sort_keys=True)
+                return id_dict[identifier]
             else:
                 id_dict[identifier] = None
                 with open(file_name, 'w') as f:
-                    json.dump(id_dict, f)
+                    json.dump(id_dict, f, indent=4, sort_keys=True)
                 return None
         else:
             raise Exception(f"Failed to retrieve data: {response.status_code}")

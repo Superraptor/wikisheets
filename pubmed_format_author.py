@@ -32,6 +32,8 @@ wbi_config['MEDIAWIKI_API_URL'] = yaml_dict['wikibase']['mediawiki_api_url']
 wbi_config['SPARQL_ENDPOINT_URL'] = yaml_dict['wikibase']['sparql_endpoint_url']
 wbi_config['WIKIBASE_URL'] = yaml_dict['wikibase']['wikibase_url']
 
+wikibase_name = yaml_dict['wikibase']['wikibase_name']
+
 with open(constants.AU_mapping_file, 'r') as f:
     authors_json = json.load(f)
 
@@ -82,9 +84,13 @@ def process_author_list(author_list_obj):
                 if match_key:
                     authors_json[match_key] = match_id
                 else:
-                    authors_json[full_name + ", " + str(full_name_counter)] = match_id
+                    if str(full_name + ", " + str(full_name_counter)) in authors_json:
+                        authors_json[full_name + ", " + str(full_name_counter)][wikibase_name] = match_id
+                    else:
+                        authors_json[full_name + ", " + str(full_name_counter)] = {}
+                        authors_json[full_name + ", " + str(full_name_counter)][wikibase_name] = match_id
                 with open(constants.AU_mapping_file, 'w') as f:
-                    json.dump(authors_json, f)
+                    json.dump(authors_json, f, indent=4, sort_keys=True)
                 processed_author['lgbtdb'] = match_id
             else:
                 item = add_to_existing_author(processed_author, match_id)
@@ -182,7 +188,10 @@ def add_to_existing_author(processed_author_object, match_id):
     full_name = processed_author_object['P797']['value'] + " " + processed_author_object['P839']['value']
     last_name_first = processed_author_object['P839']['value'] + ", " + processed_author_object['P797']['value']
 
-    item.aliases.set('en', full_name)
+    if str(item.labels.get('en').value) == str(full_name):
+        pass
+    else:
+        item.aliases.set('en', full_name)
     item.aliases.set('en', last_name_first)
 
     referencesA = models.references.References()
@@ -194,6 +203,7 @@ def add_to_existing_author(processed_author_object, match_id):
     item.claims.add(author_instance_of_claim, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
 
     for claim_id, claim_dict in processed_author_object.items():
+        already_appended = False
 
         if claim_id in ["P798"]: # String
             claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict['value'], references=referencesA)
@@ -201,9 +211,12 @@ def add_to_existing_author(processed_author_object, match_id):
             claim_obj = datatypes.MonolingualText(prop_nr=claim_id, text=claim_dict['value'], language=claim_dict['language'], references=referencesA)
         elif claim_id in ["P838"]: # Item
             # ??? --> affiliation
+            print(claim_dict)
             for sub_claim in claim_dict:
                 print(sub_claim)
-                claim_obj = datatypes.Item(prop_nr=claim_id, value=sub_claim['lgbtdb'], references=referencesA)
+                claim_obj = datatypes.Item(prop_nr=claim_id, value=sub_claim[wikibase_name], references=referencesA)
+                item.claims.add(claim_obj, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
+                already_appended = True
         elif claim_id in ["P796"]: # ExternalID
             claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict, references=referencesA)
         elif claim_id in ["P3"]: # Wikidata mapping
@@ -212,10 +225,10 @@ def add_to_existing_author(processed_author_object, match_id):
             referenceB.add(datatypes.Item(prop_nr="P21", value="Q20285")) # stated in; Wikidata
             referenceB.add(datatypes.Item(prop_nr="P278", value="Q27192")) # mapping subject source, mapping from
             referenceB.add(datatypes.Item(prop_nr="P279", value="Q21039")) # mapping object source, mapping to
-            referenceB.add(datatypes.Item(prop_nr="P561", value=processed_author_object["P796"]))
-            referenceB.add(datatypes.Item(prop_nr="P562", value=claim_dict))
+            referenceB.add(datatypes.ExternalID(prop_nr="P561", value=processed_author_object["P796"]))
+            referenceB.add(datatypes.ExternalID(prop_nr="P562", value=processed_author_object["P3"]))
             referencesB.add(referenceB)
-            claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict['value'], references=referencesB)
+            claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict, references=referencesB)
         else:
             if claim_id in ['P812', 'P795', 'P33']: # These properties are qualifiers declared in the article, not on the author themself.
                 pass
@@ -225,7 +238,8 @@ def add_to_existing_author(processed_author_object, match_id):
                 print('here3')
                 exit()
 
-        item.claims.add(claim_obj, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
+        if not already_appended:
+            item.claims.add(claim_obj, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
 
     print(item)
     item.write()
@@ -251,9 +265,11 @@ def add_new_author(processed_author_object):
     referencesA.add(referenceA)
 
     author_instance_of_claim = datatypes.Item(prop_nr="P1", value="Q20846", references=referencesA)
-    item.claims.add(author_instance_of_claim)
+    item.claims.add(author_instance_of_claim, action_if_exists=ActionIfExists.FORCE_APPEND)
+    item.write()
 
     for claim_id, claim_dict in processed_author_object.items():
+        already_appended = False
 
         if claim_id in ["P798"]: # String
             claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict['value'], references=referencesA)
@@ -263,7 +279,9 @@ def add_new_author(processed_author_object):
             # ??? --> affiliation
             for sub_claim in claim_dict:
                 print(sub_claim)
-                claim_obj = datatypes.Item(prop_nr=claim_id, value=sub_claim['lgbtdb'], references=referencesA)
+                claim_obj = datatypes.Item(prop_nr=claim_id, value=sub_claim[wikibase_name], references=referencesA)
+                item.claims.add(claim_obj, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
+                already_appended = True
         elif claim_id in ["P796"]: # ExternalID
             print(claim_dict)
             claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict, references=referencesA)
@@ -273,10 +291,10 @@ def add_new_author(processed_author_object):
             referenceB.add(datatypes.Item(prop_nr="P21", value="Q20285")) # stated in; Wikidata
             referenceB.add(datatypes.Item(prop_nr="P278", value="Q27192")) # mapping subject source, mapping from
             referenceB.add(datatypes.Item(prop_nr="P279", value="Q21039")) # mapping object source, mapping to
-            referenceB.add(datatypes.Item(prop_nr="P561", value=processed_author_object["P796"]))
-            referenceB.add(datatypes.Item(prop_nr="P562", value=claim_dict))
+            referenceB.add(datatypes.ExternalID(prop_nr="P561", value=processed_author_object["P796"]))
+            referenceB.add(datatypes.ExternalID(prop_nr="P562", value=claim_dict))
             referencesB.add(referenceB)
-            claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict['value'], references=referencesB)
+            claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict, references=referencesB)
         else:
             if claim_id in ['P812', 'P795', 'P33']: # These properties are qualifiers declared in the article, not on the author themself.
                 pass
@@ -286,7 +304,8 @@ def add_new_author(processed_author_object):
                 print('here3')
                 exit()
 
-        item.claims.add(claim_obj)
+        if not already_appended:
+            item.claims.add(claim_obj, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
 
     print(item)
     item.write()

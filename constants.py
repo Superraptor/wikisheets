@@ -39,9 +39,17 @@ SFM_mapping_file = "pubmed-space-flight-mission.json"
 
 # Secondary Mappings
 
+AbstractType_mapping_file = "pubmed-abstract-type.json"
+
+ChemicalList_mapping_file = "pubmed-chemicals.json"
+
 # NLM category based on:
 # https://www.nlm.nih.gov/bsd/policy/structured_abstracts.html
 NlmCategory_mapping_file = "pubmed-nlmcategory.json"
+
+# Publication model based on:
+# https://www.nlm.nih.gov/bsd/licensee/elements_article_source.html
+PubModel_mapping_file = "pubmed-pubmodel.json"
 
 # Tertiary Mappings
 grants_mapping_file = "pubmed-grants.json"

@@ -47,9 +47,11 @@ def process_keyword(keyword):
             with open('pubmed-keywords.json', 'w') as f:
                 json.dump(keywords_json, f, indent=4, sort_keys=True)
             print("Keyword (%s) not found. Please add a mapping to the appropriate JSON file to continue." % str(keyword))
+            exit()
     else:
         keywords_json[keyword] = {}
         with open('pubmed-keywords.json', 'w') as f:
             json.dump(keywords_json, f, indent=4, sort_keys=True)
         print("Keyword (%s) not found. Please add a mapping to the appropriate JSON file to continue." % str(keyword))
+        exit()
     return processed_keyword

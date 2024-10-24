@@ -1,0 +1,350 @@
+{
+    "sources": {
+        "MEDLINE®PubMed® XML Element Descriptions and their Attributes": "https://www.nlm.nih.gov/bsd/licensee/elements_descriptions.html",
+        "MEDLINE/PubMed Data Element (Field) Descriptions": "https://wayback.archive-it.org/org-350/20240424200258/https://www.nlm.nih.gov/bsd/mms/medlineelements.html"
+    },
+
+    "PubmedArticle": {
+        "XML Element Number": 1,
+        "XML Element Description": "<PubmedArticle>",
+        "XML Element Attributes": []
+    },
+    "MedlineCitation": {
+        "XML Element Number": 2,
+        "XML Element Description": "<MedlineCitation>",
+        "XML Element Attributes": ["Owner", "Status", "IndexingMethod", "VersionID", "VersionDate"]
+    },
+    "PMID": {
+        "XML Element Number": 2,
+        "XML Element Description": "<PMID>",
+        "XML Element Attributes": ["Version"]
+    },
+    "DateCreated": {
+        "XML Element Number": 3,
+        "XML Element Description": "<DateCreated>",
+        "XML Element Attributes": [],
+
+        "Field": "Create Date",
+        "Abbreviation": "CRDT"
+    },
+    "DateCompleted": {
+        "XML Element Number": 4,
+        "XML Element Description": "<DateCompleted>",
+        "XML Element Attributes": [],
+
+        "Field": "Date Completed",
+        "Abbreviation": "DCOM"
+    },
+    "DateRevised": {
+        "XML Element Number": 5,
+        "XML Element Description": "<DateRevised>",
+        "XML Element Attributes": [],
+
+        "Field": "Date Last Revised",
+        "Abbreviation": "LR"
+    },
+    "Article": {
+        "XML Element Number": 6,
+        "XML Element Description": "<Article>",
+        "XML Element Attributes": ["PubModel"]
+    },
+    "Journal": {
+        "XML Element Number": 7,
+        "XML Element Description": "<Journal>",
+        "XML Element Attributes": []
+    },
+    "ISSN": {
+        "XML Element Number": 8,
+        "XML Element Description": "<ISSN>",
+        "XML Element Attributes": ["ISSNType"],
+
+        "Field": "ISSN",
+        "Abbreviation": "IS"
+    },
+    "JournalIssue": {
+        "XML Element Number": 9,
+        "XML Element Description": "<JournalIssue>",
+        "XML Element Attributes": ["CitedMedium"]
+    },
+    "Volume": {
+        "XML Element Number": 10,
+        "XML Element Description": "<Volume>",
+        "XML Element Attributes": [],
+
+        "Field": "Volume",
+        "Abbreviation": "VI"
+    },
+    "Issue": {
+        "XML Element Number": 11,
+        "XML Element Description": "<Issue>",
+        "XML Element Attributes": [],
+
+        "Field": "Issue",
+        "Abbreviation": "IP"
+    },
+    "PubDate": {
+        "XML Element Number": 12,
+        "XML Element Description": "<PubDate>",
+        "XML Element Attributes": [],
+
+        "Field": "Date of Publication",
+        "Abbreviation": "DP"
+    },
+    "Title": {
+        "XML Element Number": 13,
+        "XML Element Description": "<Title>",
+        "XML Element Attributes": [],
+
+        "Field": "Journal Title",
+        "Abbreviation": "JT"
+    },
+    "ISOAbbreviation": {
+        "XML Element Number": 14,
+        "XML Element Description": "<ISOAbbreviation>",
+        "XML Element Attributes": []
+    },
+    "ArticleTitle": {
+        "XML Element Number": 15,
+        "XML Element Description": "<ArticleTitle>",
+        "XML Element Attributes": [],
+
+        "Field": "Title",
+        "Abbreviation": "TI"
+    },
+    "Pagination": {
+        "XML Element Number": 16,
+        "XML Element Description": "<Pagination>",
+        "XML Element Attributes": [],
+
+        "Field": "Pagination",
+        "Abbreviation": "PG"
+    },
+    "ELocationID": {
+        "XML Element Number": 17,
+        "XML Element Description": "<ELocationID>",
+        "XML Element Attributes": ["EIdType", "ValidYN"],
+
+        "Field": "Location Identifier",
+        "Abbreviation": "LID"
+    },
+    "Abstract": {
+        "XML Element Number": 18,
+        "XML Element Description": "<Abstract>",
+        "XML Element Attributes": [],
+
+        "Field": "Abstract",
+        "Abbreviation": "AB"
+    },
+    "AbstractText": {
+        "XML Element Number": 18,
+        "XML Element Description": "<AbstractText>",
+        "XML Element Attributes": []
+    },
+    "CopyrightInformation": {
+        "XML Element Number": 19,
+        "XML Element Description": "<CopyrightInformation>",
+        "XML Element Attributes": [],
+
+        "Field": "Copyright Information",
+        "Abbreviation": "CI"
+    },
+    "AuthorList": {
+        "XML Element Number": 20,
+        "XML Element Description": "<AuthorList>",
+        "XML Element Attributes": []
+    },
+    "Language": {
+        "XML Element Number": 21,
+        "XML Element Description": "<Language>",
+        "XML Element Attributes": [],
+
+        "Field": "Language",
+        "Abbreviation": "LA"
+    },
+    "DataBankList": {
+        "XML Element Number": 22,
+        "XML Element Description": "<DataBankList>",
+        "XML Element Attributes": []
+    },
+    "GrantList": {
+        "XML Element Number": 23,
+        "XML Element Description": "<GrantList>",
+        "XML Element Attributes": []
+    },
+    "PublicationTypeList": {
+        "XML Element Number": 24,
+        "XML Element Description": "<PublicationTypeList>",
+        "XML Element Attributes": []
+    },
+    "VernacularTitle": {
+        "XML Element Number": 25,
+        "XML Element Description": "<VernacularTitle>",
+        "XML Element Attributes": [],
+
+        "Field": "Transliterated Title",
+        "Abbreviation": "TT"
+    },
+    "ArticleDate": {
+        "XML Element Number": 26,
+        "XML Element Description": "<ArticleDate>",
+        "XML Element Attributes": []
+    },
+    "Country": {
+        "XML Element Number": 27,
+        "XML Element Description": "<Country>",
+        "XML Element Attributes": []
+    },
+    "MedlineTA": {
+        "XML Element Number": 28,
+        "XML Element Description": "<MedlineTA>",
+        "XML Element Attributes": [],
+
+        "Field": "Journal Title Abbreviation",
+        "Abbreviation": "TA"
+    },
+    "NlmUniqueID": {
+        "XML Element Number": 29,
+        "XML Element Description": "<NlmUniqueID>",
+        "XML Element Attributes": [],
+
+        "Field": "NLM Unique ID",
+        "Abbreviation": "JID"
+    },
+    "ISSNLinking": {
+        "XML Element Number": 30,
+        "XML Element Description": "<ISSNLinking>",
+        "XML Element Attributes": []
+    },
+    "ChemicalList": {
+        "XML Element Number": 31,
+        "XML Element Description": "<ChemicalList>",
+        "XML Element Attributes": []
+    },
+    "SupplMeshList": {
+        "XML Element Number": 32,
+        "XML Element Description": "<SupplMeshList>",
+        "XML Element Attributes": []
+    },
+    "CitationSubset": {
+        "XML Element Number": 33,
+        "XML Element Description": "<CitationSubset>",
+        "XML Element Attributes": [],
+
+        "Field": "Subset",
+        "Abbreviation": "SB"
+    },
+    "CommentsCorrectionsList": {
+        "XML Element Number": 34,
+        "XML Element Description": "<CommentsCorrectionsList>",
+        "XML Element Attributes": []
+    },
+    "GeneSymbolList": {
+        "XML Element Number": 35,
+        "XML Element Description": "<GeneSymbolList>",
+        "XML Element Attributes": []
+    },
+    "MeshHeadingList": {
+        "XML Element Number": 36,
+        "XML Element Description": "<MeshHeadingList>",
+        "XML Element Attributes": [],
+
+        "Field": "MeSH Terms",
+        "Abbreviation": "MH"
+    },
+    "NumberOfReferences": {
+        "XML Element Number": 37,
+        "XML Element Description": "<NumberOfReferences>",
+        "XML Element Attributes": [],
+
+        "Field": "Number of References",
+        "Abbreviation": "RF"
+    },
+    "PersonalNameSubjectList": {
+        "XML Element Number": 38,
+        "XML Element Description": "<PersonalNameSubjectList>",
+        "XML Element Attributes": []
+    },
+    "OtherID": {
+        "XML Element Number": 39,
+        "XML Element Description": "<OtherID>",
+        "XML Element Attributes": [],
+
+        "Field": "Other ID",
+        "Abbreviation": "OID"
+    },
+    "OtherAbstract": {
+        "XML Element Number": 40,
+        "XML Element Description": "<OtherAbstract>",
+        "XML Element Attributes": ["Type"],
+
+        "Field": "Other Abstract",
+        "Abbreviation": "OAB"
+    },
+    "KeywordList": {
+        "XML Element Number": 41,
+        "XML Element Description": "<KeywordList>",
+        "XML Element Attributes": []
+    },
+    "SpaceFlightMission": {
+        "XML Element Number": 42,
+        "XML Element Description": "<SpaceFlightMission>",
+        "XML Element Attributes": [],
+
+        "Field": "Space Flight Mission",
+        "Abbreviation": "SFM"
+    },
+    "InvestigatorList": {
+        "XML Element Number": 43,
+        "XML Element Description": "<InvestigatorList>",
+        "XML Element Attributes": []
+    },
+    "GeneralNote": {
+        "XML Element Number": 44,
+        "XML Element Description": "<GeneralNote>",
+        "XML Element Attributes": ["Owner"],
+
+        "Field": "General Note",
+        "Abbreviation": "GN"
+    },
+    "CoiStatement": {
+        "XML Element Number": 45,
+        "XML Element Description": "<CoiStatement>",
+        "XML Element Attributes": [],
+
+        "Field": "Conflict of Interest Statement",
+        "Abbreviation": "COIS"
+    },
+    "PubmedData": {
+        "XML Element Number": 45,
+        "XML Element Description": "<PubmedData>",
+        "XML Element Attributes": ["Pubstatus"]
+    },
+    "History": {
+        "XML Element Number": 46,
+        "XML Element Description": "<History>",
+        "XML Element Attributes": []
+    },
+    "PubmedPubDate": {
+        "XML Element Number": 47,
+        "XML Element Description": "<PubmedPubDate>",
+        "XML Element Attributes": []
+    },
+    "PublicationStatus": {
+        "XML Element Number": 47,
+        "XML Element Description": "<PublicationStatus>",
+        "XML Element Attributes": [],
+
+        "Field": "Publication Status",
+        "Abbreviation": "PST"
+    },
+    "ArticleIdList": {
+        "XML Element Number": 47,
+        "XML Element Description": "<PubmedArticle>",
+        "XML Element Attributes": []
+    },
+    "DeleteCitation": {
+        "XML Element Number": 45,
+        "XML Element Description": "<DeleteCitation>",
+        "XML Element Attributes": []
+    }
+}
