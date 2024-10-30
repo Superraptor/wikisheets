@@ -1,9 +1,54 @@
 {
+    "AIDS": {
+        "lgbtdb": "Q251"
+    },
+    "ART": {
+        "lgbtdb": "Q27851"
+    },
+    "Abortion care": {
+        "lgbtdb": "Q27783"
+    },
     "Administrative Data": {
         "lgbtdb": "Q27174"
     },
+    "Adolescent": {
+        "lgbtdb": "Q18024"
+    },
     "Affect": {
         "lgbtdb": "Q26995"
+    },
+    "BMI": {
+        "lgbtdb": "Q27776"
+    },
+    "Barriers to care": {
+        "lgbtdb": "Q27793"
+    },
+    "Body mass index": {
+        "lgbtdb": "Q27776"
+    },
+    "Breastfeeding": {
+        "lgbtdb": "Q4430"
+    },
+    "Case study": {
+        "lgbtdb": "Q27785"
+    },
+    "Clinical ethics": {
+        "lgbtdb": "Q27671"
+    },
+    "Criminalizing contexts": {
+        "lgbtdb": "Q27764"
+    },
+    "Decision making": {
+        "lgbtdb": "Q27669"
+    },
+    "Delivery of healthcare": {
+        "lgbtdb": "Q27672"
+    },
+    "Descriptive research": {
+        "lgbtdb": "Q27805"
+    },
+    "Dual-energy X-ray absorptiometry (DXA)": {
+        "lgbtdb": "Q27577"
     },
     "Emotion regulation": {
         "lgbtdb": "Q26994"
@@ -11,8 +56,17 @@
     "Epistemic Injustice": {
         "lgbtdb": "Q27175"
     },
+    "Estradiol": {
+        "lgbtdb": "Q11989"
+    },
     "Ethics": {
         "lgbtdb": "Q920"
+    },
+    "GENDER IDENTITY SERVICES": {
+        "lgbtdb": "Q27871"
+    },
+    "Gender": {
+        "lgbtdb": "Q1450"
     },
     "Gender Affirming Hormone Therapy": {
         "lgbtdb": "Q27405"
@@ -26,20 +80,158 @@
     "Gender diverse": {
         "lgbtdb": "Q26993"
     },
+    "Gender incongruence": {
+        "lgbtdb": "Q27848"
+    },
+    "Gender minorities": {
+        "lgbtdb": "Q5143"
+    },
+    "Gender nonconforming": {
+        "lgbtdb": "Q18730"
+    },
+    "Gender-affirming": {
+        "lgbtdb": "Q27833"
+    },
+    "Gender-affirming care": {
+        "lgbtdb": "Q17022"
+    },
+    "Gender-affirming surgery": {
+        "lgbtdb": "Q2522"
+    },
+    "Guidelines": {
+        "lgbtdb": "Q27772"
+    },
+    "HIV": {
+        "lgbtdb": "Q1632"
+    },
+    "HIV care": {
+        "lgbtdb": "Q27850"
+    },
+    "HIV prevention": {
+        "lgbtdb": "Q1637"
+    },
+    "HIV prevention & control": {
+        "lgbtdb": "Q27824"
+    },
+    "HIV self-testing": {
+        "lgbtdb": "Q27365"
+    },
+    "HIV/AIDS medication": {
+        "lgbtdb": "Q27864"
+    },
+    "Health care delivery": {
+        "lgbtdb": "Q27672"
+    },
+    "Healthcare experiences": {
+        "lgbtdb": "Q27794"
+    },
+    "Hormone replacement therapy": {
+        "lgbtdb": "Q24918"
+    },
+    "INTEGRATED CARE": {
+        "lgbtdb": "Q27872"
+    },
+    "Indonesia": {
+        "lgbtdb": "Q27544"
+    },
+    "Information-seeking behaviours": {
+        "lgbtdb": "Q27807"
+    },
+    "Informed consent": {
+        "lgbtdb": "Q10216"
+    },
     "Insurance Claim Review": {
         "lgbtdb": "Q27176"
+    },
+    "Knowledge, attitude and practice": {
+        "lgbtdb": "Q27841"
+    },
+    "LGTBQI+": {
+        "lgbtdb": "Q27865"
+    },
+    "LMICs": {
+        "lgbtdb": "Q4838"
+    },
+    "Lactation induction": {
+        "lgbtdb": "Q9442"
+    },
+    "MSM": {
+        "lgbtdb": "Q2927"
     },
     "Medical Training": {
         "lgbtdb": "Q27407"
     },
+    "Medical education": {
+        "lgbtdb": "Q16970"
+    },
+    "Men who have sex with men": {
+        "lgbtdb": "Q2927"
+    },
+    "Menopause": {
+        "lgbtdb": "Q2937"
+    },
     "Minority stress": {
         "lgbtdb": "Q2978"
+    },
+    "Minors": {
+        "lgbtdb": "Q620"
     },
     "Nonbinary": {
         "lgbtdb": "Q2521"
     },
+    "Ontario": {
+        "lgbtdb": "Q27826"
+    },
+    "Patient\u2013physician relationship": {
+        "lgbtdb": "Q27795"
+    },
+    "Pre-exposure prophylaxis": {
+        "lgbtdb": "Q17012"
+    },
     "Primary Care": {
         "lgbtdb": "Q27408"
+    },
+    "Pronouns": {
+        "lgbtdb": "Q2524"
+    },
+    "Qualitative study": {
+        "lgbtdb": "Q27765"
+    },
+    "Radiology": {
+        "lgbtdb": "Q27810"
+    },
+    "Sexual and gender minorities": {
+        "lgbtdb": "Q16834"
+    },
+    "Sexual and reproductive health": {
+        "lgbtdb": "Q27787"
+    },
+    "Sexually transmitted infections": {
+        "lgbtdb": "Q16980"
+    },
+    "Social media health advice": {
+        "lgbtdb": "Q27808"
+    },
+    "Stigma": {
+        "lgbtdb": "Q3754"
+    },
+    "Sub-saharan Africa": {
+        "lgbtdb": "Q8490"
+    },
+    "Systematic review": {
+        "lgbtdb": "Q27154"
+    },
+    "TGW": {
+        "lgbtdb": "Q3871"
+    },
+    "Testosterone": {
+        "lgbtdb": "Q3842"
+    },
+    "Top surgery": {
+        "lgbtdb": "Q18718"
+    },
+    "Trans-inclusive healthcare": {
+        "lgbtdb": "Q27796"
     },
     "Transgender": {
         "lgbtdb": "Q82"
@@ -47,25 +239,214 @@
     "Transgender Persons": {
         "lgbtdb": "Q2492"
     },
+    "Transgender nutrition": {
+        "lgbtdb": "Q27809"
+    },
+    "Transgender or nonbinary": {
+        "lgbtdb": "Q27797"
+    },
+    "Transgender persons": {
+        "lgbtdb": "Q2492"
+    },
+    "Transgender woman": {
+        "lgbtdb": "Q3871"
+    },
+    "Transgender women": {
+        "lgbtdb": "Q3871"
+    },
+    "Transgender, nonbinary, and gender expansive health": {
+        "lgbtdb": "Q27788"
+    },
+    "Uganda": {
+        "lgbtdb": "Q27762"
+    },
+    "adolescents": {
+        "lgbtdb": "Q8681"
+    },
+    "antiretroviral therapy": {
+        "lgbtdb": "Q27851"
+    },
+    "assigned female at birth (AFAB)": {
+        "lgbtdb": "Q2635"
+    },
+    "bilateral oophorectomy (BO)": {
+        "lgbtdb": "Q11755"
+    },
+    "body mass index": {
+        "lgbtdb": "Q27776"
+    },
+    "bone density": {
+        "lgbtdb": "Q27574"
+    },
+    "bone health": {
+        "lgbtdb": "Q27578"
+    },
+    "bone mineral density (BMD)": {
+        "lgbtdb": "Q27574"
+    },
+    "breast": {
+        "lgbtdb": "Q16313"
+    },
+    "breast cancer": {
+        "lgbtdb": "Q4427"
+    },
+    "breast cancer screening": {
+        "lgbtdb": "Q27659"
+    },
+    "breast health": {
+        "lgbtdb": "Q9775"
+    },
+    "community-based healthcare": {
+        "lgbtdb": "Q27814"
+    },
+    "data-driven health care": {
+        "lgbtdb": "Q27866"
+    },
+    "diet, food, and nutrition": {
+        "lgbtdb": "Q27777"
+    },
+    "digital health": {
+        "lgbtdb": "Q17011"
+    },
+    "dihydroxyprogesterone": {
+        "lgbtdb": "Q27815"
+    },
     "eating behavior": {
         "lgbtdb": "Q27178"
+    },
+    "estradiol enanthate": {
+        "lgbtdb": "Q27816"
+    },
+    "exercise": {
+        "lgbtdb": "Q16869"
+    },
+    "fish consumption": {
+        "lgbtdb": "Q27778"
+    },
+    "fruit and vegetables intake": {
+        "lgbtdb": "Q27779"
     },
     "gender affirmation": {
         "lgbtdb": "Q23092"
     },
+    "gender affirming health care": {
+        "lgbtdb": "Q27836"
+    },
+    "gender affirming hormonal therapy (GAHT)": {
+        "lgbtdb": "Q27405"
+    },
+    "gender diverse": {
+        "lgbtdb": "Q26993"
+    },
+    "gender dysphoria": {
+        "lgbtdb": "Q1459"
+    },
+    "gender-affirming care": {
+        "lgbtdb": "Q17022"
+    },
+    "gender-affirming hormone therapy": {
+        "lgbtdb": "Q27405"
+    },
+    "gender-affirming surgery": {
+        "lgbtdb": "Q2522"
+    },
+    "gender-diverse": {
+        "lgbtdb": "Q26993"
+    },
     "hormone therapy": {
         "lgbtdb": "Q1731"
+    },
+    "incidence": {
+        "lgbtdb": "Q5369"
+    },
+    "interactive management": {
+        "lgbtdb": "Q27867"
+    },
+    "mental health": {
+        "lgbtdb": "Q2944"
+    },
+    "mental health care": {
+        "lgbtdb": "Q5617"
+    },
+    "milk and yogurt consumption": {
+        "lgbtdb": "Q27780"
+    },
+    "mixed methods": {
+        "lgbtdb": "Q27827"
+    },
+    "mobile phone": {
+        "lgbtdb": "Q27854"
+    },
+    "nonbinary": {
+        "lgbtdb": "Q2521"
+    },
+    "normalization process theory": {
+        "lgbtdb": "Q27828"
     },
     "nutritional status": {
         "lgbtdb": "Q27179"
     },
+    "pre-exposure prophylaxis": {
+        "lgbtdb": "Q17012"
+    },
+    "prevalence": {
+        "lgbtdb": "Q27282"
+    },
+    "primary health care": {
+        "lgbtdb": "Q27799"
+    },
+    "puberty inhibitors": {
+        "lgbtdb": "Q3325"
+    },
     "public health": {
         "lgbtdb": "Q3328"
+    },
+    "red meat consumption": {
+        "lgbtdb": "Q27781"
+    },
+    "retrospective study": {
+        "lgbtdb": "Q27837"
+    },
+    "satisfaction with breast development": {
+        "lgbtdb": "Q27817"
+    },
+    "sexual behaviours": {
+        "lgbtdb": "Q27855"
+    },
+    "sexual health": {
+        "lgbtdb": "Q3619"
+    },
+    "socioeconomical impact": {
+        "lgbtdb": "Q27838"
     },
     "systematic review": {
         "lgbtdb": "Q27154"
     },
+    "testing behavior": {
+        "lgbtdb": "Q27856"
+    },
+    "testosterone": {
+        "lgbtdb": "Q3842"
+    },
     "transgender": {
         "lgbtdb": "Q82"
+    },
+    "transgender and nonbinary youth": {
+        "lgbtdb": "Q26159"
+    },
+    "transgender health": {
+        "lgbtdb": "Q11415"
+    },
+    "transgender persons": {
+        "lgbtdb": "Q2492"
+    },
+    "transgender primary care": {
+        "lgbtdb": "Q27818"
+    },
+    "transgender women": {
+        "lgbtdb": "Q3871"
+    },
+    "travestis": {
+        "lgbtdb": "Q27819"
     }
 }

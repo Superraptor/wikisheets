@@ -11,7 +11,7 @@ import os.path
 import requests
 
 def main():
-    print()
+    get_wikidata_id("33015654")
 
 # TODO: Generalize.
 def get_wikidata_id(identifier, id_type="PubMed"):
@@ -39,34 +39,49 @@ def get_wikidata_id(identifier, id_type="PubMed"):
         print("id_type must be 'PubMed' or 'NLM'. Exiting...")
         exit()
 
+    if isinstance(identifier, str):
+        identifier = [identifier]
+
     if os.path.isfile(file_name):
         with open(file_name, 'r') as f:
             id_dict = json.load(f)
 
-    print(identifier)
-    if identifier not in id_dict.keys():
+    to_find_list = []
+    found_dict = {}
+    for iden in identifier:
+        if iden not in id_dict.keys():
+            to_find_list.append(iden)
+        else:
+            found_dict[iden] = id_dict[iden]
+
+    if len(to_find_list) > 0:
+
+        formatted_identifier = " ".join([f'"{iden}"' for iden in to_find_list])
 
         # Set up the appropriate SPARQL query depending on the identifier type
         if id_type == "PubMed":
             query = f"""
-            SELECT ?wikidataID WHERE {{
-            ?wikidataID wdt:P698 "{identifier}".
+            SELECT ?otherID ?wikidataID WHERE {{
+            ?wikidataID wdt:P698 ?otherID .
+            VALUES ?otherID {{ {formatted_identifier} }}.
             }}
             """
         elif id_type == "NLM":
             query = f"""
-            SELECT ?wikidataID WHERE {{
-            ?wikidataID wdt:P1055 "{identifier}".
+            SELECT ?otherID ?wikidataID WHERE {{
+            ?wikidataID wdt:P1055 ?otherID .
+            VALUES ?otherID {{ {formatted_identifier} }}.
             }}
             """
         elif id_type == "ORCID":
             query = f"""
-            SELECT ?wikidataID WHERE {{
-            ?wikidataID wdt:P496 "{identifier}".
+            SELECT ?otherID ?wikidataID WHERE {{
+            ?wikidataID wdt:P496 ?otherID .
+            VALUES ?otherID {{ {formatted_identifier} }}.
             }}
             """
         else:
-            raise ValueError("id_type must be either 'PubMed' or 'NLM'.")
+            raise ValueError("id_type must be 'PubMed', 'NLM', or 'ORCID'.")
         
         # Set up the SPARQL endpoint URL
         url = 'https://query.wikidata.org/sparql'
@@ -80,20 +95,33 @@ def get_wikidata_id(identifier, id_type="PubMed"):
         if response.status_code == 200:
             data = response.json()
             if data['results']['bindings']:
-                id_dict[identifier] = (data['results']['bindings'][0]['wikidataID']['value']).rsplit('/', 1)[-1]
+                results = response.json()["results"]["bindings"]
+                for result in results:
+                    id_dict[result["otherID"]["value"]] = (result['wikidataID']['value']).rsplit('/', 1)[-1]
+                    found_dict[result["otherID"]["value"]] = (result['wikidataID']['value']).rsplit('/', 1)[-1]
                 with open(file_name, 'w') as f:
                     json.dump(id_dict, f, indent=4, sort_keys=True)
-                return id_dict[identifier]
+                if len(to_find_list) == 1:
+                    return found_dict[to_find_list[0]]
+                else:
+                    return found_dict
             else:
-                id_dict[identifier] = None
+                for iden in to_find_list:
+                    id_dict[iden] = None
                 with open(file_name, 'w') as f:
                     json.dump(id_dict, f, indent=4, sort_keys=True)
-                return None
+                if len(to_find_list) > 1:
+                    return found_dict
+                else:
+                    return None
         else:
             raise Exception(f"Failed to retrieve data: {response.status_code}")
 
     else:
-        return id_dict[identifier]
+        if len(identifier) == 1:
+            return found_dict[identifier[0]]
+        else:
+            return found_dict
 
 # Example usage:
 # wikidata_id = get_wikidata_id("27679979", id_type="PubMed")

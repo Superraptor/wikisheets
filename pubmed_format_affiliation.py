@@ -42,8 +42,8 @@ def process_affiliation_list(affiliation_list_obj):
     for affiliation_obj in affiliation_list_obj:
         processed_affiliation = process_affiliation(affiliation_obj)
         if isinstance(processed_affiliation[wikibase_name], list):
-            for processed_aff_obj in processed_affiliation:
-                new_processed_affiliation = processed_affiliation
+            for processed_aff_obj in processed_affiliation[wikibase_name]:
+                new_processed_affiliation = {}
                 new_processed_affiliation[wikibase_name] = processed_aff_obj
                 new_processed_affiliation['P33'] = affiliation_counter # series ordinal
                 processed_affiliation_list.append(new_processed_affiliation)

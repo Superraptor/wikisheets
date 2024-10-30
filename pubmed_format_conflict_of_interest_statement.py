@@ -11,6 +11,10 @@ from pubmed_format_language import process_languages, return_wikibase_mapping
 
 import constants
 import json
+import nltk
+import textwrap
+
+wikibase_str_text_limit = 400
 
 with open(constants.LA_mapping_file, 'r') as f:
     language_json = json.load(f)
@@ -24,15 +28,25 @@ def process_conflict_of_interest_statement(entrez_obj, conflict_of_interest_stat
     else:
         wikibase_language = return_wikibase_mapping(languages[0])
 
-    processed_coi = {
-        'value': str(conflict_of_interest_statement).strip()
-    }
-
+    processed_coi_language = None
     if len(languages) > 1:
         detected_lang = detect_language(str(conflict_of_interest_statement))
-        processed_coi['language'] = detected_lang
+        processed_coi_language = detected_lang
     else:
-        processed_coi['language'] = wikibase_language
+        processed_coi_language = wikibase_language
+
+    tokenizer = determine_tokenizer(str(processed_coi_language))
+    sentences = tokenizer.tokenize(str(conflict_of_interest_statement).strip())
+    processed_coi = []
+    for counter, sentence in enumerate(sentences):
+        if len(sentence) > wikibase_str_text_limit:
+            sentence = textwrap.shorten(sentence, width=wikibase_str_text_limit)
+        coi_sentence = {
+            'value': sentence,
+            'language': processed_coi_language,
+            'P33': counter + 1
+        }
+        processed_coi.append(coi_sentence)
 
     return processed_coi
 
@@ -50,3 +64,17 @@ def detect_language(str):
                 wikibase_lang = LA_dict["wikibase"]
 
     return wikibase_lang
+
+def determine_tokenizer(str):
+    wikibase_lang = detect(str)
+    punkt = None
+
+    for LA, LA_dict in language_json.items():
+        if LA_dict["wikibase"] == wikibase_lang:
+            punkt = LA_dict["punkt"]
+            break
+    if punkt is None:
+        print("No value found. Exiting...")
+        exit()
+
+    return nltk.data.load('tokenizers/punkt/%s.pickle' % punkt)

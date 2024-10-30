@@ -88,10 +88,10 @@ def identify_registry_number_type(registry_number_str):
 # (3) non-MeSH rare disease terms (Class 3) from the NIH Office of Rare Diseases
 # (4) organisms (Class 4) including viruses conforming to the International Committee on Taxonomy of Viruses (ICTV) nomenclature
 def get_substance_name(chemical):
-    substance_name = str(chemical['NameOfSubstance'])
+    substance_name = chemical['NameOfSubstance']
     mesh_mapping = get_mesh_ui(substance_name)
     processed_substance_name = {
-        'P102': substance_name,
+        'P102': str(substance_name),
         'P846': mesh_mapping
     }
     return processed_substance_name
@@ -110,6 +110,8 @@ def get_mesh_ui(substance_name):
 
 def add_to_mapping_file(mesh_name, mesh_uid):
     new_match = input('What is the QID that matches the MeSH heading "%s" (%s)?\n' % (str(mesh_name), str(mesh_uid)))
+    if str(mesh_name) not in mesh_headings_json:
+        mesh_headings_json[str(mesh_name)] = {}
     mesh_headings_json[str(mesh_name)][wikibase_name] = new_match.strip()
 
     with open(constants.MH_mapping_file, 'w') as f:

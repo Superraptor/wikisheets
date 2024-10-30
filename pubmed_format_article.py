@@ -144,6 +144,8 @@ def process_article(entrez_obj, journal_id):
     indexing_method = str(entrez_obj.attributes['IndexingMethod'])
     if indexing_method == "Automated":
         in_database_article['P834'] = 'Q27177'
+    elif indexing_method == "Curated":
+        in_database_article['P834'] = 'Q27775'
     else:
         print(indexing_method)
         exit()
@@ -227,88 +229,88 @@ def process_article(entrez_obj, journal_id):
         }
     }
 
-    try:
-        publication_model_str = entrez_obj['Article'].attributes['PubModel']
-        if publication_model_str in pubmodel_mappings_json:
-            if wikibase_name in pubmodel_mappings_json[publication_model_str]:
-                article['claims']['P828'] = pubmodel_mappings_json[publication_model_str][wikibase_name]
-            else:
-                new_match = add_to_mapping_file(publication_model_str)
-                article['claims']['P828'] = pubmodel_mappings_json[publication_model_str][wikibase_name]
-        else:
-            pubmodel_mappings_json[publication_model_str] = {}
-            new_match = add_to_mapping_file(publication_model_str)
-            article['claims']['P828'] = pubmodel_mappings_json[publication_model_str][wikibase_name]
-    except AttributeError:
-        pass
+    #try:
+    #    publication_model_str = entrez_obj['Article'].attributes['PubModel']
+    #    if publication_model_str in pubmodel_mappings_json:
+    #        if wikibase_name in pubmodel_mappings_json[publication_model_str]:
+    #            article['claims']['P828'] = pubmodel_mappings_json[publication_model_str][wikibase_name]
+    #        else:
+    #            new_match = add_to_mapping_file(publication_model_str)
+    #            article['claims']['P828'] = pubmodel_mappings_json[publication_model_str][wikibase_name]
+    #    else:
+    #        pubmodel_mappings_json[publication_model_str] = {}
+    #        new_match = add_to_mapping_file(publication_model_str)
+    #        article['claims']['P828'] = pubmodel_mappings_json[publication_model_str][wikibase_name]
+    #except AttributeError:
+    #    pass
 
     # Derived from:
     # https://www.nlm.nih.gov/bsd/licensee/elements_article_source.html
-    print("Processing article date...")
-    if 'ArticleDate' in entrez_obj['Article']:
-        article['claims']['P836'] = []
-        if len(entrez_obj['Article']['ArticleDate']) > 0:
-            for article_date in entrez_obj['Article']['ArticleDate']:
-                article_date_obj = {
-                    'value': process_date(article_date)
-                }
-                if 'DateType' in article_date.attributes:
-                    if article_date.attributes['DateType'] == 'Electronic':
-                        article_date_obj['P828'] = 'Q27190'
-                    else:
-                        print(article_date_obj)
-                        print(article_date.attributes['DateType'])
-                        exit()
-            article['claims']['P836'].append(article_date_obj)
-        else:
-            article['claims']['P836'].append("UNKNOWN")
+    #print("Processing article date...")
+    #if 'ArticleDate' in entrez_obj['Article']:
+    #    article['claims']['P836'] = []
+    #    if len(entrez_obj['Article']['ArticleDate']) > 0:
+    #        for article_date in entrez_obj['Article']['ArticleDate']:
+    #            article_date_obj = {
+    #                'value': process_date(article_date)
+    #            }
+    #            if 'DateType' in article_date.attributes:
+    #                if article_date.attributes['DateType'] == 'Electronic':
+    #                    article_date_obj['P828'] = 'Q27190'
+    #                else:
+    #                    print(article_date_obj)
+    #                    print(article_date.attributes['DateType'])
+    #                    exit()
+    #        article['claims']['P836'].append(article_date_obj)
+    #    else:
+    #        article['claims']['P836'].append("UNKNOWN")
 
     # AB: Abstract
-    print("Processing abstract...")
-    if 'Abstract' in entrez_obj['Article']:
-        article['claims']['P434'] = process_abstract(entrez_obj, entrez_obj['Article']['Abstract'])
+    #print("Processing abstract...")
+    #if 'Abstract' in entrez_obj['Article']:
+    #    article['claims']['P434'] = process_abstract(entrez_obj, entrez_obj['Article']['Abstract'])
 
     # AID: Article Identifier
-    print("Processing article identifiers...")
-    processed_identifiers = process_elocation_ids(entrez_obj['Article']['ELocationID'])
-    for identifier_prop_nr, identifier_dict in processed_identifiers.items():
-        article['claims'][identifier_prop_nr] = identifier_dict
+    #print("Processing article identifiers...")
+    #processed_identifiers = process_elocation_ids(entrez_obj['Article']['ELocationID'])
+    #for identifier_prop_nr, identifier_dict in processed_identifiers.items():
+    #    article['claims'][identifier_prop_nr] = identifier_dict
 
     # AU: Author
-    print("Processing authors...")
-    processed_authors = process_author_list(entrez_obj['Article']['AuthorList'])
-    article['claims']['P72'] = []
-    for author in processed_authors:
-        article['claims']['P72'].append(author)
+    #print("Processing authors...")
+    #processed_authors = process_author_list(entrez_obj['Article']['AuthorList'])
+    #article['claims']['P72'] = []
+    #for author in processed_authors:
+    #    article['claims']['P72'].append(author)
 
     # COIS: Conflict of Interest Statement
-    print("Processing conflict-of-interest statement...")
-    if 'CoiStatement' in entrez_obj:
-        article['claims']['P833'] = process_conflict_of_interest_statement(entrez_obj, entrez_obj['CoiStatement'])
+    #print("Processing conflict-of-interest statement...")
+    #if 'CoiStatement' in entrez_obj:
+    #    article['claims']['P833'] = process_conflict_of_interest_statement(entrez_obj, entrez_obj['CoiStatement'])
 
     # GR: Grant Number
-    print("Processing grants...")
-    if 'GrantList' in entrez_obj['Article']:
-        grant_list = process_grant_list(entrez_obj['Article']['GrantList'])
-        article['claims']['P840'] = []
-        for grant in grant_list:
-            article['claims']['P840'].append(grant)
+    #print("Processing grants...")
+    #if 'GrantList' in entrez_obj['Article']:
+    #    grant_list = process_grant_list(entrez_obj, entrez_obj['Article']['GrantList'])
+    #    article['claims']['P840'] = []
+    #    for grant_id, grant_dict in grant_list.items():
+    #        article['claims']['P840'].append(grant_dict)
 
     # IP: Issue
-    print("Processing journal issue...")
-    if 'Issue' in entrez_obj['Article']['Journal']['JournalIssue']:
-        article['claims']['P77'] = entrez_obj['Article']['Journal']['JournalIssue']['Issue']
+    #print("Processing journal issue...")
+    #if 'Issue' in entrez_obj['Article']['Journal']['JournalIssue']:
+    #    article['claims']['P77'] = entrez_obj['Article']['Journal']['JournalIssue']['Issue']
 
-    if 'PubDate' in entrez_obj['Article']['Journal']['JournalIssue']:
-        if 'Year' in entrez_obj['Article']['Journal']['JournalIssue']['PubDate']:
-            # Date Issued
-            article['claims']['P469'] = process_date(entrez_obj['Article']['Journal']['JournalIssue']['PubDate'])
-            # DP: Date Published
-            article['claims']['P58'] = process_date(entrez_obj['Article']['Journal']['JournalIssue']['PubDate'])
+    #if 'PubDate' in entrez_obj['Article']['Journal']['JournalIssue']:
+    #    if 'Year' in entrez_obj['Article']['Journal']['JournalIssue']['PubDate']:
+    #        # Date Issued
+    #        article['claims']['P469'] = process_date(entrez_obj['Article']['Journal']['JournalIssue']['PubDate'])
+    #        # DP: Date Published
+    #        article['claims']['P58'] = process_date(entrez_obj['Article']['Journal']['JournalIssue']['PubDate'])
 
-        elif 'MedlineDate' in entrez_obj['Article']['Journal']['JournalIssue']['PubDate']:
-            article['claims']['P469'] = process_date_range(entrez_obj['Article']['Journal']['JournalIssue']['PubDate']['MedlineDate'])
-            article['claims']['P58'] = process_date_range(entrez_obj['Article']['Journal']['JournalIssue']['PubDate']['MedlineDate'])
+    #    elif 'MedlineDate' in entrez_obj['Article']['Journal']['JournalIssue']['PubDate']:
+    #        article['claims']['P469'] = process_date_range(entrez_obj['Article']['Journal']['JournalIssue']['PubDate']['MedlineDate'])
+    #        article['claims']['P58'] = process_date_range(entrez_obj['Article']['Journal']['JournalIssue']['PubDate']['MedlineDate'])
 
     # MH: MeSH Terms
     print("Processing MeSH terms...")
@@ -322,14 +324,14 @@ def process_article(entrez_obj, journal_id):
             article['claims']['P846'] = process_chemical_list(entrez_obj['ChemicalList'])
 
     # OAB: Other Abstract
-    print("Processing other abstracts...")
-    if 'OtherAbstract' in entrez_obj:
-        if len(entrez_obj['OtherAbstract']) > 0:
-            article['claims']['P830'] = []
-            for other_abs in entrez_obj['OtherAbstract']:
-                print(other_abs)
-                other_abs_obj = process_abstract(entrez_obj, other_abs)
-                article['claims']['P830'].append(other_abs_obj)
+    #print("Processing other abstracts...")
+    #if 'OtherAbstract' in entrez_obj:
+    #    if len(entrez_obj['OtherAbstract']) > 0:
+    #        article['claims']['P830'] = []
+    #        for other_abs in entrez_obj['OtherAbstract']:
+    #            print(other_abs)
+    #            other_abs_obj = process_abstract(entrez_obj, other_abs)
+    #            article['claims']['P830'].append(other_abs_obj)
 
     # OT: Other Term
     print("Processing keywords...")
@@ -339,12 +341,12 @@ def process_article(entrez_obj, journal_id):
             article['claims']['P136'] = keyword_list
 
     # PG: Pagination
-    print("Processing pagination...")
-    if 'Pagination' in entrez_obj['Article']:
-        article['claims']['P511'] = entrez_obj['Article']['Pagination']['StartPage']
-        if 'EndPage' in entrez_obj['Article']['Pagination']:
-            article['claims']['P510'] = entrez_obj['Article']['Pagination']['EndPage']
-        article['claims']['P57'] = entrez_obj['Article']['Pagination']['MedlinePgn']
+    #print("Processing pagination...")
+    #if 'Pagination' in entrez_obj['Article']:
+    #    article['claims']['P511'] = entrez_obj['Article']['Pagination']['StartPage']
+    #    if 'EndPage' in entrez_obj['Article']['Pagination']:
+    #        article['claims']['P510'] = entrez_obj['Article']['Pagination']['EndPage']
+    #    article['claims']['P57'] = entrez_obj['Article']['Pagination']['MedlinePgn']
 
     # PT: Publication Type
     print("Processing publication types...")
@@ -354,52 +356,52 @@ def process_article(entrez_obj, journal_id):
         article['claims']['P799'] = publication_type['P799']
 
     # TT: Transliterated Title (Vernacular Title)
-    print("Processing vernacular title...")
-    if 'VernacularTitle' in entrez_obj['Article']:
-        vernacular_title = {
-            'value': str(entrez_obj['Article']['VernacularTitle']),
-            'reference': {
-                'P21': 'Q19463' # stated in; PubMed
-            }
-        }
-        if len(languages) > 1:
-            detected_lang = detect_language(str(entrez_obj['Article']['VernacularTitle']))
-            vernacular_title['language'] = detected_lang
-            if detected_lang in aliases:
-                aliases[detected_lang].append(str(entrez_obj['Article']['VernacularTitle']))
-            else:
-                aliases[detected_lang] = [str(entrez_obj['Article']['VernacularTitle'])]
-        else:
-            vernacular_title['language'] = wikibase_language
-            if wikibase_language in aliases:
-                aliases[wikibase_language].append(str(entrez_obj['Article']['VernacularTitle']))
-            else:
-                aliases[wikibase_language] = [str(entrez_obj['Article']['VernacularTitle'])]
-        article['claims']['P841'] = vernacular_title
+    #print("Processing vernacular title...")
+    #if 'VernacularTitle' in entrez_obj['Article']:
+    #    vernacular_title = {
+    #        'value': str(entrez_obj['Article']['VernacularTitle']),
+    #        'reference': {
+    #            'P21': 'Q19463' # stated in; PubMed
+    #        }
+    #    }
+    #    if len(languages) > 1:
+    #        detected_lang = detect_language(str(entrez_obj['Article']['VernacularTitle']))
+    #        vernacular_title['language'] = detected_lang
+    #        if detected_lang in aliases:
+    #            aliases[detected_lang].append(str(entrez_obj['Article']['VernacularTitle']))
+    #        else:
+    #            aliases[detected_lang] = [str(entrez_obj['Article']['VernacularTitle'])]
+    #    else:
+    #        vernacular_title['language'] = wikibase_language
+    #        if wikibase_language in aliases:
+    #            aliases[wikibase_language].append(str(entrez_obj['Article']['VernacularTitle']))
+    #        else:
+    #            aliases[wikibase_language] = [str(entrez_obj['Article']['VernacularTitle'])]
+    #    article['claims']['P841'] = vernacular_title
 
-    print("Attempting to map to Wikidata...")
-    article_wikidata_id = get_wikidata_id(pmid["value"], id_type="PubMed")
-    if article_wikidata_id:
-        article['claims']['P3'] = {
-            'value': article_wikidata_id,
-            'reference': {
-                'P21': 'Q20285', # stated in; Wikidata
-                'P278': 'Q27165', # mapping subject source, mapping from
-                'P279': 'Q21039', # mapping object source, mapping to
-                'P561': pmid["value"], # mapping subject
-                'P562': article_wikidata_id # mapping object
-            }
-        }
+    #print("Attempting to map to Wikidata...")
+    #article_wikidata_id = get_wikidata_id(pmid["value"], id_type="PubMed")
+    #if article_wikidata_id:
+    #    article['claims']['P3'] = {
+    #        'value': article_wikidata_id,
+    #        'reference': {
+    #            'P21': 'Q20285', # stated in; Wikidata
+    #            'P278': 'Q27165', # mapping subject source, mapping from
+    #            'P279': 'Q21039', # mapping object source, mapping to
+    #            'P561': pmid["value"], # mapping subject
+    #            'P562': article_wikidata_id # mapping object
+    #        }
+    #    }
 
     print(entrez_obj)
     print(article)
 
-    if match_qid:
-        add_to_existing_article(article, match_qid)
-        return match_qid
-    else:
-        new_id = add_new_article(article).id
-        return new_id
+    #if match_qid:
+    #    add_to_existing_article(article, match_qid)
+    #    return match_qid
+    #else:
+    #    new_id = add_new_article(article).id
+    #    return new_id
     
 # Add if exists.
 def add_to_existing_article(processed_article_object, match_id):
@@ -419,7 +421,7 @@ def add_to_existing_article(processed_article_object, match_id):
         referenceA1.add(datatypes.Item(prop_nr='P21', value='Q19463'))
         referencesA.add(referenceA1)
 
-        if claim_id in ["P1", "P68", "P72", "P136", "P206", "P307", "P568", "P791", "P799", "P828", "P846"]: # Item
+        if claim_id in ["P1", "P68", "P72", "P136", "P206", "P307", "P568", "P791", "P799", "P828", "P840", "P846"]: # Item
             if isinstance(claim_dict, str):
                 claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict, references=referencesA)
             elif isinstance(claim_dict, list):
@@ -487,7 +489,7 @@ def add_to_existing_article(processed_article_object, match_id):
                         for qual_claim_id, qual_claim_val in sub_claim_dict.items():
                             if qual_claim_id in ["P33"]: # Quantity
                                 qualifiers.add(datatypes.Quantity(prop_nr=qual_claim_id, amount=qual_claim_val))
-                            elif qual_claim_id in ["P816", "P826"]: # Item
+                            elif qual_claim_id in ["P87", "P816", "P826", "P832"]: # Item
                                 if qual_claim_val is None:
                                     qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, snaktype=WikibaseSnakType.NO_VALUE))
                                 else:
@@ -511,7 +513,7 @@ def add_to_existing_article(processed_article_object, match_id):
                                 for qual_claim_id, qual_claim_val in infra_claim_dict.items():
                                     if qual_claim_id in ["P33"]: # Quantity
                                         qualifiers.add(datatypes.Quantity(prop_nr=qual_claim_id, amount=qual_claim_val))
-                                    elif qual_claim_id in ["P816", "P826"]:
+                                    elif qual_claim_id in ["P87", "P816", "P826", "P832"]:
                                         if qual_claim_val is None:
                                             qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, snaktype=WikibaseSnakType.NO_VALUE))
                                         else:
@@ -653,7 +655,7 @@ def add_new_article(processed_article_object):
         referenceA1.add(datatypes.Item(prop_nr='P21', value='Q19463'))
         referencesA.add(referenceA1)
 
-        if claim_id in ["P1", "P68", "P72", "P136", "P206", "P307", "P568", "P791", "P799", "P828", "P846"]: # Item
+        if claim_id in ["P1", "P68", "P72", "P136", "P206", "P307", "P568", "P791", "P799", "P828", "P840", "P846"]: # Item
             if isinstance(claim_dict, str):
                 claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict, references=referencesA)
             elif isinstance(claim_dict, list):
@@ -676,7 +678,7 @@ def add_new_article(processed_article_object):
                                 for qual_sub_claim_id, qual_sub_claim_val in qual_claim_val.items():
                                     if qual_sub_claim_id in ["P205", "P829"]: # Item
                                         qualifiers.add(datatypes.Item(prop_nr=qual_sub_claim_id, value=qual_sub_claim_val))
-                            elif isinstance(qual_claim_val, str) and claim_id == 'P72':
+                            elif isinstance(qual_claim_val, str) and claim_id in ['P72', 'P840']:
                                 if qual_claim_id in ["P812"]: # Item
                                     qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, value=qual_claim_val))
                             elif isinstance(qual_claim_val, dict) and claim_id == 'P72':
@@ -705,10 +707,16 @@ def add_new_article(processed_article_object):
                 for qual_claim_id, qual_claim_val in claim_dict.items():
                     if qual_claim_id in ["P793", "P794"]: # Time
                         qualifiers.add(datatypes.Time(prop_nr=qual_claim_id, time='+'+str(qual_claim_val)+'T00:00:00'+'Z', precision=WikibaseDatePrecision.DAY))
-                    elif qual_claim_id in ["P492", "P834", "P835", "P837"]: # Item
+                    elif qual_claim_id in ["P492", "P812", "P834", "P835", "P837"]: # Item
                         qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, value=qual_claim_val))
-                claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict['value'], qualifiers=qualifiers, references=referencesA)
+                if 'value' in claim_dict:
+                    claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict['value'], qualifiers=qualifiers, references=referencesA)
+                else:
+                    print(claim_id)
+                    print(claim_dict)
+                    claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict[wikibase_name], qualifiers=qualifiers, references=referencesA)
             else:
+                print("x1")
                 print(claim_id)
                 print(claim_dict)
                 exit()
@@ -721,7 +729,7 @@ def add_new_article(processed_article_object):
                         for qual_claim_id, qual_claim_val in sub_claim_dict.items():
                             if qual_claim_id in ["P33"]: # Quantity
                                 qualifiers.add(datatypes.Quantity(prop_nr=qual_claim_id, amount=qual_claim_val))
-                            elif qual_claim_id in ["P816", "P826"]: # Item
+                            elif qual_claim_id in ["P87", "P816", "P826", "P832"]: # Item
                                 if qual_claim_val is None:
                                     qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, snaktype=WikibaseSnakType.NO_VALUE))
                                 else:
@@ -745,7 +753,7 @@ def add_new_article(processed_article_object):
                                 for qual_claim_id, qual_claim_val in infra_claim_dict.items():
                                     if qual_claim_id in ["P33"]: # Quantity
                                         qualifiers.add(datatypes.Quantity(prop_nr=qual_claim_id, amount=qual_claim_val))
-                                    elif qual_claim_id in ["P816", "P826"]:
+                                    elif qual_claim_id in ["P87", "P816", "P826", "P832"]:
                                         if qual_claim_val is None:
                                             qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, snaktype=WikibaseSnakType.NO_VALUE))
                                         else:
@@ -756,16 +764,19 @@ def add_new_article(processed_article_object):
                                 item.claims.add(claim_obj, action_if_exists=ActionIfExists.MERGE_REFS_OR_APPEND)
                                 already_appended = True
                     else:
+                        print("x2")
                         print(claim_id)
                         print(claim_dict)
                         exit()
                 else:
+                    print("x3")
                     print(claim_id)
                     print(claim_dict)
                     exit()
             elif isinstance(claim_dict, dict):
                 claim_obj = datatypes.MonolingualText(prop_nr=claim_id, text=claim_dict['value'], language=claim_dict['language'], references=referencesA)
             else:
+                print("x4")
                 print(claim_id)
                 print(claim_dict)
                 exit()
@@ -785,6 +796,7 @@ def add_new_article(processed_article_object):
                 if isinstance(claim_dict, str):
                     claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict, references=referencesA)
                 elif isinstance(claim_dict, list):
+                    print("x5")
                     print(claim_id)
                     print(claim_dict)
                     exit()
@@ -797,6 +809,7 @@ def add_new_article(processed_article_object):
                             qualifiers.add(datatypes.Item(prop_nr=qual_claim_id, value=qual_claim_val))
                     claim_obj = datatypes.ExternalID(prop_nr=claim_id, value=claim_dict['value'], qualifiers=qualifiers, references=referencesA)
                 else:
+                    print("x6")
                     print(claim_id)
                     print(claim_dict)
                     exit()
@@ -805,6 +818,7 @@ def add_new_article(processed_article_object):
             if isinstance(claim_dict, str):
                 claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict, references=referencesA)
             elif isinstance(claim_dict, list):
+                print("x7")
                 print(claim_id)
                 print(claim_dict)
                 exit()
@@ -856,6 +870,7 @@ def add_new_article(processed_article_object):
                 else:
                     claim_obj = datatypes.Time(prop_nr=claim_id, time='+'+str(claim_dict['value'])+'T00:00:00'+'Z', precision=WikibaseDatePrecision.DAY, qualifiers=qualifiers, references=referencesA)
         else:
+            print("x8")
             print(claim_id)
             print(claim_dict)
             print('here2')

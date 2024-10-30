@@ -121,8 +121,13 @@ def process_copyright_date(copyright_str):
 # TODO:
 def process_copyright_holder(entrez_obj, copyright_str):
     processed_copyright_holder_list = []
+
+    author_surname_is_in_copyright_str = False
+    for author in entrez_obj['Article']['AuthorList']:
+        if str(author['LastName']).lower() in copyright_str.lower():
+            author_surname_is_in_copyright_str = True
     
-    if 'author' in copyright_str.lower() or 'authors' in copyright_str.lower():
+    if 'author' in copyright_str.lower() or 'authors' in copyright_str.lower() or author_surname_is_in_copyright_str:
         for author in entrez_obj['Article']['AuthorList']:
             match_id = check_if_author_exists(author)
             if match_id:

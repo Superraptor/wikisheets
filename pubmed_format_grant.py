@@ -39,11 +39,17 @@ with open(constants.grants_mapping_file, 'r') as f:
 with open(constants.GR_mapping_file, 'r') as f:
     grant_codes_json = json.load(f)
 
+with open(constants.funding_mechanism_mapping_file, 'r') as f:
+    grant_funding_mechanism_json = json.load(f)
+
+with open(constants.award_type_mapping_file, 'r') as f:
+    grant_award_type_json = json.load(f)
+
 #
 #   GENERAL METHODS
 #
 
-def process_grant_list(grant_list_object, wbi):
+def process_grant_list(entrez_obj, grant_list_object):
     grant_list_obj = {}
     for counter, grant in enumerate(grant_list_object):
         grant_complete = None
@@ -61,22 +67,47 @@ def process_grant_list(grant_list_object, wbi):
             if match_id:
                 continue_to_add = input("Has this item (%s) already been updated? [Y/n]\n" % (str(match_id)))
                 if continue_to_add in ['Y', 'y']:
-                    grants_json[grant['GrantID']] = match_id
+                    if grant['GrantID'] not in grants_json:
+                        grants_json[grant['GrantID']] = {}
+                    grants_json[grant['GrantID']][wikibase_name] = match_id
                     with open(constants.grants_mapping_file, 'w') as f:
                         json.dump(grants_json, f)
-                    grant_list_obj[grant['GrantID']][wikibase_name] = match_id
+                    grants_json[grant['GrantID']][wikibase_name] = match_id
+                    with open(constants.grants_mapping_file, 'w') as f:
+                        json.dump(grants_json, f, indent=4, sort_keys=True)
+                    grant_list_obj[grant['GrantID']][wikibase_name] = str(match_id)
                 else:
-                    item = add_to_existing_grant(wbi, grant_list_obj[grant['GrantID']], match_id)
-                    grant_list_obj[grant['GrantID']][wikibase_name] = str(item.id)
+                    item = add_to_existing_grant(grant_list_obj[grant['GrantID']], match_id)
+                    grants_json[grant['GrantID']][wikibase_name] = str(match_id)
+                    grant_list_obj[grant['GrantID']][wikibase_name] = str(match_id)
             else:
-                item = add_new_grant(wbi, grant_list_obj[grant['GrantID']])
-                grant_list_obj[grant['GrantID']][wikibase_name] = str(item.id)
+                item = add_new_grant(grant_list_obj[grant['GrantID']])
+                if grant['GrantID'] in grants_json:
+                    grants_json[grant['GrantID']][wikibase_name] = str(item.id)
+                    grant_list_obj[grant['GrantID']][wikibase_name] = str(item.id)
+                else:
+                    grants_json[grant['GrantID']] = {}
+                    grants_json[grant['GrantID']][wikibase_name] = str(item.id)
+                    grant_list_obj[grant['GrantID']][wikibase_name] = str(item.id)
+                with open(constants.grants_mapping_file, 'w') as f:
+                    json.dump(grants_json, f, indent=4, sort_keys=True)
         else:
             grant_list_obj[str(counter)] = process_grant(grant)
             if grant_complete:
                 grant_list_obj[str(counter)]['P812'] = grant_complete
+            
+            if str(entrez_obj['Article']['ArticleTitle']) in grants_json:
+                item = add_to_existing_grant(grant_list_obj[str(counter)], grants_json[str(entrez_obj['Article']['ArticleTitle'])][wikibase_name])
+                grant_list_obj[str(counter)][wikibase_name] = item.id
+            else:
+                item = add_new_grant(grant_list_obj[str(counter)])
+                grant_list_obj[str(counter)][wikibase_name] = item.id
+                grants_json[str(entrez_obj['Article']['ArticleTitle'])] = {}
+                grants_json[str(entrez_obj['Article']['ArticleTitle'])][wikibase_name] = str(item.id)
+                with open(constants.grants_mapping_file, 'w') as f:
+                    json.dump(grants_json, f, indent=4, sort_keys=True)
+            
             print(grant_list_obj)
-            exit()
 
     return grant_list_obj
 
@@ -95,10 +126,11 @@ def process_grant(grant_obj):
         processed_grant_obj['P809'] = grant_identifier
     grant_funding_mechanism_val = grant_funding_mechanism(grant_obj)
     if grant_funding_mechanism_val:
-        processed_grant_obj['P804'] = grant_funding_mechanism_val
+        processed_grant_obj['P804'] = grant_funding_mechanism_json[grant_funding_mechanism_val][wikibase_name]
     grant_activity_code_val = grant_activity_code(grant_obj)
     if grant_activity_code_val:
-        processed_grant_obj['P805'] = grant_activity_code_val
+        print(grant_activity_code_val)
+        processed_grant_obj['P805'] = grant_award_type_json[grant_activity_code_val][wikibase_name]
     grant_acronym_val = grant_acronym(grant_obj)
     if grant_acronym_val:
         processed_grant_obj['P810'] = grant_acronym_val
@@ -115,7 +147,7 @@ def process_grant(grant_obj):
     if grant_country_val:
         processed_grant_obj['P802'] = grant_country_val # Use country of origin (P802)
         
-    return grant_obj
+    return processed_grant_obj
 
 #
 #   SUBPROCESS METHODS
@@ -134,81 +166,85 @@ def grant_id(grant_obj):
 def grant_funding_mechanism(grant_obj):
     grant_funding_mechanism_val = None
     grant_identifier = grant_id(grant_obj)
-    if re.match(r'[A-Z]{1}[\d]{2}', grant_identifier):
-        grant_funding_mechanism_val = grant_identifier[0]
-        grant_activity_code = grant_identifier[0:3]
+    if grant_identifier:
+        if re.match(r'[A-Z]{1}[\d]{2}', grant_identifier):
+            grant_funding_mechanism_val = grant_identifier[0]
+            grant_activity_code = grant_identifier[0:3]
     return grant_funding_mechanism_val
 
 def grant_activity_code(grant_obj):
     grant_activity_code_val = None
     grant_identifier = grant_id(grant_obj)
-    if re.match(r'[A-Z]{1}[\d]{2}', grant_identifier):
-        grant_activity_code_val = grant_identifier[0:3]
+    if grant_identifier:
+        if re.match(r'[A-Z]{1}[\d]{2}', grant_identifier):
+            grant_activity_code_val = grant_identifier[0:3]
     return grant_activity_code_val
 
 def grant_acronym(grant_obj):
     grant_acronym_val = None
     grant_identifier = grant_id(grant_obj)
-    if 'Acronym' in grant_obj:
-        if 'GrantID' in grant_obj:
-            if len(grant_obj['Acronym']) > 2:
-                if grant_obj['Acronym'] == "GATES":
+    if grant_identifier:
+        if 'Acronym' in grant_obj:
+            if 'GrantID' in grant_obj:
+                if len(grant_obj['Acronym']) > 2:
+                    if grant_obj['Acronym'] == "GATES":
+                        grant_acronym_val = grant_obj['Acronym']
+                    else:
+                        grant_acronym_val = grant_identifier[0:2]
+                else:            
                     grant_acronym_val = grant_obj['Acronym']
-                else:
-                    grant_acronym_val = grant_identifier[0:2]
-            else:            
-                grant_acronym_val = grant_obj['Acronym']
-            if grant_acronym_val in grant_identifier:
-                grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
-            else:
-                try:
-                    grant_acronym_val = (grant_identifier.split(" ")[1])[0:2]
+                if grant_acronym_val in grant_identifier:
                     grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
-                except IndexError:
-                    pass
+                else:
+                    try:
+                        grant_acronym_val = (grant_identifier.split(" ")[1])[0:2]
+                        grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
+                    except IndexError:
+                        pass
+            else:
+                grant_acronym_val = grant_obj['Acronym']
         else:
-            grant_acronym_val = grant_obj['Acronym']
-    else:
-        grant_agency = grant_codes_json[grant_obj['Agency']]
-        if "Acronym" in grant_agency:
-            grant_acronym_val = grant_agency['Acronym']
-            try:
-                grant_serial_number = grant_identifier.split(grant_acronym_val)[1]
-            except IndexError:
-                grant_acronym_val = (grant_identifier.split(' ')[1])[0:2]
+            grant_agency = grant_codes_json[grant_obj['Agency']]
+            if "Acronym" in grant_agency:
+                grant_acronym_val = grant_agency['Acronym']
+                try:
+                    grant_serial_number = grant_identifier.split(grant_acronym_val)[1]
+                except IndexError:
+                    grant_acronym_val = (grant_identifier.split(' ')[1])[0:2]
     return grant_acronym_val
 
 def grant_serial_number(grant_obj):
     grant_serial_number_val = None
     grant_identifier = grant_id(grant_obj)
-    if 'Acronym' in grant_obj:
-        if 'GrantID' in grant_obj:
-            if len(grant_obj['Acronym']) > 2:
-                if grant_obj['Acronym'] == "GATES":
+    if grant_id:
+        if 'Acronym' in grant_obj:
+            if 'GrantID' in grant_obj:
+                if len(grant_obj['Acronym']) > 2:
+                    if grant_obj['Acronym'] == "GATES":
+                        grant_acronym_val = grant_obj['Acronym']
+                    else:
+                        grant_acronym_val = grant_identifier[0:2]
+                else:            
                     grant_acronym_val = grant_obj['Acronym']
+                if grant_acronym_val in grant_identifier:
+                    grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
                 else:
-                    grant_acronym_val = grant_identifier[0:2]
-            else:            
-                grant_acronym_val = grant_obj['Acronym']
-            if grant_acronym_val in grant_identifier:
-                grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
+                    try:
+                        grant_acronym_val = (grant_identifier.split(" ")[1])[0:2]
+                        grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
+                    except IndexError:
+                        pass
             else:
+                grant_acronym_val = grant_obj['Acronym']
+        else:
+            grant_agency_val = grant_codes_json[grant_obj['Agency']]
+            if "Acronym" in grant_agency_val:
+                grant_acronym_val = grant_agency_val['Acronym']
                 try:
-                    grant_acronym_val = (grant_identifier.split(" ")[1])[0:2]
                     grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
                 except IndexError:
-                    pass
-        else:
-            grant_acronym_val = grant_obj['Acronym']
-    else:
-        grant_agency_val = grant_codes_json[grant_obj['Agency']]
-        if "Acronym" in grant_agency_val:
-            grant_acronym_val = grant_agency_val['Acronym']
-            try:
-                grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
-            except IndexError:
-                grant_acronym_val = (grant_identifier.split(' ')[1])[0:2]
-                grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
+                    grant_acronym_val = (grant_identifier.split(' ')[1])[0:2]
+                    grant_serial_number_val = grant_identifier.split(grant_acronym_val)[1]
     return grant_serial_number_val
 
 def grant_agency(grant_obj):
@@ -338,13 +374,14 @@ def grant_country(grant_obj):
 
 
 # Add if exists.
-def add_to_existing_grant(wbi, processed_grant_object, match_id):
+def add_to_existing_grant(processed_grant_object, match_id):
     login_instance = wbi_login.Login(user=full_bot_name, password=bot_password)
     wbi = WikibaseIntegrator(login=login_instance)
 
     item = wbi.item.get(match_id)
 
-    item.aliases.set('en', processed_grant_object['P809'])
+    if 'P809' in processed_grant_object:
+        item.aliases.set('en', processed_grant_object['P809'])
 
     referencesA = models.references.References()
     referenceA = models.references.Reference()
@@ -356,9 +393,19 @@ def add_to_existing_grant(wbi, processed_grant_object, match_id):
 
     for claim_id, claim_dict in processed_grant_object.items():
         if claim_id in ["P809", "P810", "P807"]: # String
-            claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict['value'], references=referencesA)
+            claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict, references=referencesA)
         elif claim_id in ["P804", "P805", "P806", "P811", "P802"]: # Item
-            claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict['value'], references=referencesA)
+            if isinstance(claim_dict, str):
+                claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict, references=referencesA)
+            elif isinstance(claim_dict, dict):
+                claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict[wikibase_name], references=referencesA)
+            else:
+                print(claim_id)
+                print(claim_dict)
+                print('here4')
+                exit()
+        elif claim_id in ["P812"]:
+            pass
         else:
             print(claim_id)
             print(claim_dict)
@@ -372,12 +419,13 @@ def add_to_existing_grant(wbi, processed_grant_object, match_id):
     return item
 
 # Add new.
-def add_new_grant(wbi, processed_grant_object):
+def add_new_grant(processed_grant_object):
     login_instance = wbi_login.Login(user=full_bot_name, password=bot_password)
     wbi = WikibaseIntegrator(login=login_instance)
     item = wbi.item.new()
 
-    item.aliases.set('en', processed_grant_object['P809'])
+    if 'P809' in processed_grant_object:
+        item.aliases.set('en', processed_grant_object['P809'])
 
     referencesA = models.references.References()
     referenceA = models.references.Reference()
@@ -389,9 +437,19 @@ def add_new_grant(wbi, processed_grant_object):
 
     for claim_id, claim_dict in processed_grant_object.items():
         if claim_id in ["P809", "P810", "P807"]: # String
-            claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict['value'], references=referencesA)
+            claim_obj = datatypes.String(prop_nr=claim_id, value=claim_dict, references=referencesA)
         elif claim_id in ["P804", "P805", "P806", "P811", "P802"]: # Item
-            claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict['value'], references=referencesA)
+            if isinstance(claim_dict, str):
+                claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict, references=referencesA)
+            elif isinstance(claim_dict, dict):
+                claim_obj = datatypes.Item(prop_nr=claim_id, value=claim_dict[wikibase_name], references=referencesA)
+            else:
+                print(claim_id)
+                print(claim_dict)
+                print('here4')
+                exit()
+        elif claim_id in ["P812"]:
+            pass
         else:
             print(claim_id)
             print(claim_dict)

@@ -745,5 +745,11 @@
         "Full Institute/Organization Name": "National Institute on Minority Health and Health Disparities",
         "Wikidata": "Q6973755",
         "lgbtdb": "Q26219"
+    },
+    "Kirby Institute": {
+        "lgbtdb": "Q27529"
+    },
+    "seed grant from the Kirby Institute, University of New South Wales, Sydney, Australia": {
+        "lgbtdb": "Q27529"
     }
 }

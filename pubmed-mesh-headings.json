@@ -1,4 +1,16 @@
 {
+    "Abortion, Induced": {
+        "lgbtdb": "Q19834",
+        "mesh": "D000028"
+    },
+    "Absorptiometry, Photon": {
+        "lgbtdb": "Q27576",
+        "mesh": "D015502"
+    },
+    "Acquired Immunodeficiency Syndrome": {
+        "lgbtdb": "Q251",
+        "mesh": "D000163"
+    },
     "Adolescent": {
         "lgbtdb": "Q18024",
         "mesh": "D000293"
@@ -7,13 +19,25 @@
         "lgbtdb": "Q18022",
         "mesh": "D000328"
     },
+    "Age Factors": {
+        "lgbtdb": "Q27804",
+        "mesh": "D000367"
+    },
     "Aged": {
         "lgbtdb": "Q18026",
         "mesh": "D000368"
     },
+    "Algorithms": {
+        "lgbtdb": "Q20810",
+        "mesh": "D000465"
+    },
     "Anti-HIV Agents": {
         "lgbtdb": "Q330",
         "mesh": "D019380"
+    },
+    "Anti-Retroviral Agents": {
+        "lgbtdb": "Q336",
+        "mesh": "D044966"
     },
     "Argentina": {
         "lgbtdb": "Q25888",
@@ -23,17 +47,49 @@
         "lgbtdb": "Q27391",
         "mesh": "D001291"
     },
+    "Autistic Disorder": {
+        "lgbtdb": "Q27644",
+        "mesh": "D001321"
+    },
+    "Bacteria": {
+        "lgbtdb": "Q27846",
+        "mesh": "D001419"
+    },
+    "Behavioral Risk Factor Surveillance System": {
+        "lgbtdb": "Q2500",
+        "mesh": "D040343"
+    },
+    "Bibliometrics": {
+        "lgbtdb": "Q27766",
+        "mesh": "D015706"
+    },
     "Biomarkers": {
         "lgbtdb": "Q27315",
         "mesh": "D015415"
+    },
+    "Body Mass Index": {
+        "lgbtdb": "Q27776",
+        "mesh": "D015992"
+    },
+    "Bone Density": {
+        "lgbtdb": "Q27574",
+        "mesh": "D015519"
     },
     "Brazil": {
         "lgbtdb": "Q24832",
         "mesh": "D001938"
     },
+    "Breast": {
+        "lgbtdb": "Q16313",
+        "mesh": "D001940"
+    },
     "Breast Feeding": {
         "lgbtdb": "Q4430",
         "mesh": "D001942"
+    },
+    "Breast Neoplasms": {
+        "lgbtdb": "Q27657",
+        "mesh": "D001943"
     },
     "CD4 Lymphocyte Count": {
         "lgbtdb": "Q598",
@@ -47,13 +103,121 @@
         "lgbtdb": "Q11578",
         "mesh": "D002140"
     },
+    "Canada": {
+        "lgbtdb": "Q26255",
+        "mesh": "D002170"
+    },
+    "Case-Control Studies": {
+        "lgbtdb": "Q27612",
+        "mesh": "D016022"
+    },
+    "Child": {
+        "lgbtdb": "Q18023",
+        "mesh": "D002648"
+    },
+    "China": {
+        "lgbtdb": "Q9904",
+        "mesh": "D002681"
+    },
+    "Clinical Competence": {
+        "lgbtdb": "Q27811",
+        "mesh": "D002983"
+    },
+    "Cohort Studies": {
+        "lgbtdb": "Q4597",
+        "mesh": "D015331"
+    },
+    "Coinfection": {
+        "lgbtdb": "Q27801",
+        "mesh": "D060085"
+    },
+    "Community Health Services": {
+        "lgbtdb": "Q713",
+        "mesh": "D003153"
+    },
     "Condoms": {
         "lgbtdb": "Q723",
         "mesh": "D017280"
     },
+    "Cosmetic Techniques": {
+        "lgbtdb": "Q27633",
+        "mesh": "D003357"
+    },
+    "Counseling": {
+        "lgbtdb": "Q737",
+        "mesh": "D003376"
+    },
     "Cross-Sectional Studies": {
         "lgbtdb": "Q17032",
         "mesh": "D003430"
+    },
+    "Cultural Competency": {
+        "lgbtdb": "Q17000",
+        "mesh": "D054521"
+    },
+    "Data Collection": {
+        "lgbtdb": "Q27798",
+        "mesh": "D003625"
+    },
+    "Decision Making": {
+        "lgbtdb": "Q27669",
+        "mesh": "D003657"
+    },
+    "Delivery of Health Care": {
+        "lgbtdb": "Q27672",
+        "mesh": "D003695"
+    },
+    "Delivery of Health Care, Integrated": {
+        "lgbtdb": "Q27869",
+        "mesh": "D019033"
+    },
+    "Depression": {
+        "lgbtdb": "Q4824",
+        "mesh": "D003863"
+    },
+    "Diet": {
+        "lgbtdb": "Q4853",
+        "mesh": "D004032"
+    },
+    "Digital Health": {
+        "lgbtdb": "Q17011",
+        "mesh": "D000097103"
+    },
+    "Domperidone": {
+        "lgbtdb": "Q27832",
+        "mesh": "D004294"
+    },
+    "Drug Resistance, Viral": {
+        "lgbtdb": "Q27821",
+        "mesh": "D024882"
+    },
+    "Early Detection of Cancer": {
+        "lgbtdb": "Q27658",
+        "mesh": "D055088"
+    },
+    "Education, Medical": {
+        "lgbtdb": "Q16970",
+        "mesh": "D004501"
+    },
+    "Emergency Medical Services": {
+        "lgbtdb": "Q27559",
+        "mesh": "D004632"
+    },
+    "Empathy": {
+        "lgbtdb": "Q873",
+        "mesh": "D004645"
+    },
+    "England": {
+        "lgbtdb": "Q26965",
+        "mesh": "D004739"
+    },
+    "Estradiol": {
+        "lgbtdb": "Q14051",
+        "mesh": "D004958"
+    },
+    "Exercise": {
+        "lgbtdb": "Q16869",
+        "mesh": "D015444"
     },
     "Feeding Behavior": {
         "lgbtdb": "Q27198",
@@ -67,13 +231,41 @@
         "lgbtdb": "Q27200",
         "mesh": "D005260"
     },
+    "Fertility": {
+        "lgbtdb": "Q12374",
+        "mesh": "D005298"
+    },
+    "Fertility Preservation": {
+        "lgbtdb": "Q19852",
+        "mesh": "D059247"
+    },
+    "Focus Groups": {
+        "lgbtdb": "Q27868",
+        "mesh": "D017144"
+    },
+    "Follicle Stimulating Hormone": {
+        "lgbtdb": "Q27813",
+        "mesh": "D005640"
+    },
     "Gender Dysphoria": {
         "lgbtdb": "Q1459",
         "mesh": "D000068116"
     },
+    "Gender Identity": {
+        "lgbtdb": "Q1463",
+        "mesh": "D005783"
+    },
     "Gender-Affirming Care": {
         "lgbtdb": "Q17022",
         "mesh": "D000097962"
+    },
+    "Germany": {
+        "lgbtdb": "Q24793",
+        "mesh": "D005858"
+    },
+    "Gynecology": {
+        "lgbtdb": "Q5196",
+        "mesh": "D006176"
     },
     "HIV Infections": {
         "lgbtdb": "Q1636",
@@ -83,6 +275,10 @@
         "lgbtdb": "Q27362",
         "mesh": "D000082922"
     },
+    "HIV-1": {
+        "lgbtdb": "Q27822",
+        "mesh": "D015497"
+    },
     "Health Knowledge, Attitudes, Practice": {
         "lgbtdb": "Q16931",
         "mesh": "D007722"
@@ -91,9 +287,29 @@
         "lgbtdb": "Q27392",
         "mesh": "D006282"
     },
+    "Health Services Accessibility": {
+        "lgbtdb": "Q1577",
+        "mesh": "D006297"
+    },
+    "Health Services Needs and Demand": {
+        "lgbtdb": "Q27782",
+        "mesh": "D006301"
+    },
+    "Health Status": {
+        "lgbtdb": "Q16828",
+        "mesh": "D006304"
+    },
+    "Health Status Disparities": {
+        "lgbtdb": "Q27759",
+        "mesh": "D054624"
+    },
     "Healthcare Disparities": {
         "lgbtdb": "Q27335",
         "mesh": "D054625"
+    },
+    "Hepacivirus": {
+        "lgbtdb": "Q27802",
+        "mesh": "D016174"
     },
     "Hepatitis A": {
         "lgbtdb": "Q27314",
@@ -123,6 +339,14 @@
         "lgbtdb": "Q27296",
         "mesh": "D006779"
     },
+    "Housing": {
+        "lgbtdb": "Q1735",
+        "mesh": "D006798"
+    },
+    "Human Rights": {
+        "lgbtdb": "Q1743",
+        "mesh": "D006806"
+    },
     "Humans": {
         "lgbtdb": "Q58",
         "mesh": "D006801"
@@ -131,9 +355,57 @@
         "lgbtdb": "Q5369",
         "mesh": "D015994"
     },
+    "Indonesia": {
+        "lgbtdb": "Q27541",
+        "mesh": "D007214"
+    },
+    "Information Seeking Behavior": {
+        "lgbtdb": "Q27806",
+        "mesh": "D057226"
+    },
+    "Informed Consent": {
+        "lgbtdb": "Q10216",
+        "mesh": "D007258"
+    },
+    "Informed Consent By Minors": {
+        "lgbtdb": "Q27670",
+        "mesh": "D057828"
+    },
+    "Injections": {
+        "lgbtdb": "Q27635",
+        "mesh": "D007267"
+    },
+    "Insurance Claim Review": {
+        "lgbtdb": "Q27176",
+        "mesh": "D007345"
+    },
+    "Interpersonal Relations": {
+        "lgbtdb": "Q1833",
+        "mesh": "D007398"
+    },
     "Interviews as Topic": {
         "lgbtdb": "Q27381",
         "mesh": "D007407"
+    },
+    "Italy": {
+        "lgbtdb": "Q26332",
+        "mesh": "D007558"
+    },
+    "Lactation": {
+        "lgbtdb": "Q9443",
+        "mesh": "D007774"
+    },
+    "Longitudinal Studies": {
+        "lgbtdb": "Q5545",
+        "mesh": "D008137"
+    },
+    "Lumbar Vertebrae": {
+        "lgbtdb": "Q27768",
+        "mesh": "D008159"
+    },
+    "Luteinizing Hormone": {
+        "lgbtdb": "Q27812",
+        "mesh": "D007986"
     },
     "Male": {
         "lgbtdb": "Q27201",
@@ -143,17 +415,73 @@
         "lgbtdb": "Q2895",
         "mesh": "D057228"
     },
+    "Mass Screening": {
+        "lgbtdb": "Q27770",
+        "mesh": "D008403"
+    },
+    "Medically Underserved Area": {
+        "lgbtdb": "Q27861",
+        "mesh": "D008507"
+    },
+    "Medication Adherence": {
+        "lgbtdb": "Q27863",
+        "mesh": "D055118"
+    },
+    "Menopause": {
+        "lgbtdb": "Q2937",
+        "mesh": "D008593"
+    },
+    "Mental Competency": {
+        "lgbtdb": "Q27668",
+        "mesh": "D016743"
+    },
+    "Mental Disorders": {
+        "lgbtdb": "Q5615",
+        "mesh": "D001523"
+    },
+    "Mental Health": {
+        "lgbtdb": "Q2944",
+        "mesh": "D008603"
+    },
     "Mental Health Services": {
         "lgbtdb": "Q2948",
         "mesh": "D008605"
+    },
+    "Microbiota": {
+        "lgbtdb": "Q27844",
+        "mesh": "D064307"
     },
     "Middle Aged": {
         "lgbtdb": "Q18027",
         "mesh": "D008875"
     },
+    "Midwestern United States": {
+        "lgbtdb": "Q27835",
+        "mesh": "D015146"
+    },
     "Military Personnel": {
         "lgbtdb": "Q23197",
         "mesh": "D008889"
+    },
+    "Milk, Human": {
+        "lgbtdb": "Q27829",
+        "mesh": "D008895"
+    },
+    "Models, Psychological": {
+        "lgbtdb": "Q27860",
+        "mesh": "D008960"
+    },
+    "Mutation": {
+        "lgbtdb": "Q27820",
+        "mesh": "D009154"
+    },
+    "Netherlands": {
+        "lgbtdb": "Q26337",
+        "mesh": "D009426"
+    },
+    "New Zealand": {
+        "lgbtdb": "Q26306",
+        "mesh": "D009520"
     },
     "Nurse Clinicians": {
         "lgbtdb": "Q27334",
@@ -163,6 +491,18 @@
         "lgbtdb": "Q27179",
         "mesh": "D009752"
     },
+    "Obesity": {
+        "lgbtdb": "Q3081",
+        "mesh": "D009765"
+    },
+    "Ohio": {
+        "lgbtdb": "Q27791",
+        "mesh": "D009820"
+    },
+    "Ontario": {
+        "lgbtdb": "Q27826",
+        "mesh": "D009864"
+    },
     "Pandemics": {
         "lgbtdb": "Q4957",
         "mesh": "D058873"
@@ -171,13 +511,45 @@
         "lgbtdb": "Q27364",
         "mesh": "D010342"
     },
+    "Patient Preference": {
+        "lgbtdb": "Q27755",
+        "mesh": "D057240"
+    },
+    "Patient Satisfaction": {
+        "lgbtdb": "Q16902",
+        "mesh": "D017060"
+    },
+    "Peer Group": {
+        "lgbtdb": "Q27760",
+        "mesh": "D010379"
+    },
     "Perception": {
         "lgbtdb": "Q27393",
         "mesh": "D010465"
     },
+    "Personal Autonomy": {
+        "lgbtdb": "Q27767",
+        "mesh": "D026684"
+    },
+    "Physician-Patient Relations": {
+        "lgbtdb": "Q27792",
+        "mesh": "D010817"
+    },
+    "Physicians": {
+        "lgbtdb": "Q6370",
+        "mesh": "D010820"
+    },
     "Physicians, Primary Care": {
         "lgbtdb": "Q5011",
         "mesh": "D058007"
+    },
+    "Postoperative Complications": {
+        "lgbtdb": "Q27839",
+        "mesh": "D011183"
+    },
+    "Practice Guidelines as Topic": {
+        "lgbtdb": "Q27771",
+        "mesh": "D017410"
     },
     "Practice Patterns, Physicians'": {
         "lgbtdb": "Q27403",
@@ -187,33 +559,113 @@
         "lgbtdb": "Q17012",
         "mesh": "D065129"
     },
+    "Pregnancy": {
+        "lgbtdb": "Q3250",
+        "mesh": "D011247"
+    },
+    "Premenopause": {
+        "lgbtdb": "Q27845",
+        "mesh": "D017697"
+    },
     "Prevalence": {
         "lgbtdb": "Q27282",
         "mesh": "D015995"
+    },
+    "Primary Health Care": {
+        "lgbtdb": "Q27799",
+        "mesh": "D011320"
+    },
+    "Progesterone": {
+        "lgbtdb": "Q3277",
+        "mesh": "D011374"
     },
     "Prospective Studies": {
         "lgbtdb": "Q27279",
         "mesh": "D011446"
     },
+    "Puberty": {
+        "lgbtdb": "Q3323",
+        "mesh": "D011627"
+    },
     "Qualitative Research": {
         "lgbtdb": "Q16855",
         "mesh": "D036301"
+    },
+    "Quality Improvement": {
+        "lgbtdb": "Q27870",
+        "mesh": "D058996"
+    },
+    "Radiology": {
+        "lgbtdb": "Q27810",
+        "mesh": "D011871"
+    },
+    "Referral and Consultation": {
+        "lgbtdb": "Q27862",
+        "mesh": "D012017"
+    },
+    "Reproductive Health": {
+        "lgbtdb": "Q15182",
+        "mesh": "D060728"
+    },
+    "Reproductive Medicine": {
+        "lgbtdb": "Q27859",
+        "mesh": "D018456"
+    },
+    "Rescue Work": {
+        "lgbtdb": "Q27560",
+        "mesh": "D018635"
+    },
+    "Research Personnel": {
+        "lgbtdb": "Q27763",
+        "mesh": "D012108"
     },
     "Retrospective Studies": {
         "lgbtdb": "Q27295",
         "mesh": "D012189"
     },
+    "Risk Assessment": {
+        "lgbtdb": "Q27613",
+        "mesh": "D018570"
+    },
     "Risk Factors": {
         "lgbtdb": "Q27280",
         "mesh": "D012307"
+    },
+    "Risk Reduction Behavior": {
+        "lgbtdb": "Q27853",
+        "mesh": "D040242"
+    },
+    "Risk-Taking": {
+        "lgbtdb": "Q27757",
+        "mesh": "D012309"
     },
     "SARS-CoV-2": {
         "lgbtdb": "Q27363",
         "mesh": "D000086402"
     },
+    "San Francisco": {
+        "lgbtdb": "Q7945",
+        "mesh": "D012495"
+    },
+    "Schools": {
+        "lgbtdb": "D012574",
+        "mesh": "D012574"
+    },
+    "Self-Injurious Behavior": {
+        "lgbtdb": "Q3493",
+        "mesh": "D016728"
+    },
     "Self-Testing": {
         "lgbtdb": "Q27361",
         "mesh": "D000085263"
+    },
+    "Sex Reassignment Procedures": {
+        "lgbtdb": "Q17809",
+        "mesh": "D057829"
+    },
+    "Sex Reassignment Surgery": {
+        "lgbtdb": "Q2522",
+        "mesh": "D057830"
     },
     "Sexual Behavior": {
         "lgbtdb": "Q16863",
@@ -223,33 +675,137 @@
         "lgbtdb": "Q16834",
         "mesh": "D000072339"
     },
+    "Sexually Transmitted Diseases": {
+        "lgbtdb": "Q3676",
+        "mesh": "D012749"
+    },
+    "Silicones": {
+        "lgbtdb": "Q27634",
+        "mesh": "D012828"
+    },
+    "Social Justice": {
+        "lgbtdb": "Q3735",
+        "mesh": "D012935"
+    },
+    "Social Media": {
+        "lgbtdb": "Q3740",
+        "mesh": "D061108"
+    },
+    "Social Stigma": {
+        "lgbtdb": "Q3754",
+        "mesh": "D057545"
+    },
     "Social Theory": {
         "lgbtdb": "Q27438",
         "mesh": "D066269"
+    },
+    "Societies, Medical": {
+        "lgbtdb": "Q27773",
+        "mesh": "D012955"
+    },
+    "Sociodemographic Factors": {
+        "lgbtdb": "Q27803",
+        "mesh": "D000091569"
     },
     "Socioeconomic Factors": {
         "lgbtdb": "Q27281",
         "mesh": "D012959"
     },
+    "South Africa": {
+        "lgbtdb": "Q26303",
+        "mesh": "D013019"
+    },
+    "State Medicine": {
+        "lgbtdb": "Q27774",
+        "mesh": "D013222"
+    },
+    "Students": {
+        "lgbtdb": "Q6884",
+        "mesh": "D013334"
+    },
+    "Students, Medical": {
+        "lgbtdb": "Q18012",
+        "mesh": "D013337"
+    },
+    "Suicidal Ideation": {
+        "lgbtdb": "Q3815",
+        "mesh": "D059020"
+    },
+    "Suicide": {
+        "lgbtdb": "Q3816",
+        "mesh": "D013405"
+    },
+    "Suicide, Attempted": {
+        "lgbtdb": "Q19648",
+        "mesh": "D013406"
+    },
     "Surveys and Questionnaires": {
         "lgbtdb": "Q27404",
         "mesh": "D011795"
+    },
+    "Telemedicine": {
+        "lgbtdb": "Q18017",
+        "mesh": "D017216"
+    },
+    "Tertiary Care Centers": {
+        "lgbtdb": "Q27834",
+        "mesh": "D062606"
+    },
+    "Testosterone": {
+        "lgbtdb": "Q3842",
+        "mesh": "D013739"
     },
     "Transgender Persons": {
         "lgbtdb": "Q2492",
         "mesh": "D063106"
     },
+    "Transsexualism": {
+        "lgbtdb": "Q2512",
+        "mesh": "D014189"
+    },
+    "Treatment Outcome": {
+        "lgbtdb": "Q27840",
+        "mesh": "D016896"
+    },
+    "Uganda": {
+        "lgbtdb": "Q27762",
+        "mesh": "D014454"
+    },
+    "United Kingdom": {
+        "lgbtdb": "Q27761",
+        "mesh": "D006113"
+    },
     "United States": {
         "lgbtdb": "Q94",
         "mesh": "D014481"
+    },
+    "Universities": {
+        "lgbtdb": "Q7053",
+        "mesh": "D014495"
     },
     "Unsafe Sex": {
         "lgbtdb": "Q4037",
         "mesh": "D047568"
     },
+    "Vagina": {
+        "lgbtdb": "Q4043",
+        "mesh": "D014621"
+    },
+    "Violence": {
+        "lgbtdb": "Q4052",
+        "mesh": "D014754"
+    },
     "Viral Load": {
         "lgbtdb": "Q4068",
         "mesh": "D019562"
+    },
+    "Wales": {
+        "lgbtdb": "Q27858",
+        "mesh": "D014852"
+    },
+    "Washington": {
+        "lgbtdb": "Q25885",
+        "mesh": "D014861"
     },
     "Young Adult": {
         "lgbtdb": "Q18025",
@@ -259,13 +815,41 @@
         "lgbtdb": "Q27378",
         "mesh": "Q000008"
     },
+    "adverse effects": {
+        "lgbtdb": "Q6788",
+        "mesh": "Q000009"
+    },
     "blood": {
         "lgbtdb": "Q9878",
         "mesh": "Q000097"
     },
+    "chemistry": {
+        "lgbtdb": "Q27831",
+        "mesh": "Q000737"
+    },
+    "classification": {
+        "lgbtdb": "Q18846",
+        "mesh": "Q000145"
+    },
+    "complications": {
+        "lgbtdb": "Q27800",
+        "mesh": "Q000150"
+    },
     "diagnosis": {
         "lgbtdb": "Q19637",
         "mesh": "Q000175"
+    },
+    "diagnostic imaging": {
+        "lgbtdb": "Q27769",
+        "mesh": "Q000000981"
+    },
+    "drug effects": {
+        "lgbtdb": "Q27575",
+        "mesh": "Q000187"
+    },
+    "drug therapy": {
+        "lgbtdb": "Q846",
+        "mesh": "Q000188"
     },
     "education": {
         "lgbtdb": "Q863",
@@ -275,13 +859,41 @@
         "lgbtdb": "Q4958",
         "mesh": "Q000453"
     },
+    "ethics": {
+        "lgbtdb": "Q920",
+        "mesh": "Q000941"
+    },
+    "etiology": {
+        "lgbtdb": "Q4976",
+        "mesh": "Q000209"
+    },
+    "genetics": {
+        "lgbtdb": "Q1515",
+        "mesh": "Q000235"
+    },
+    "isolation & purification": {
+        "lgbtdb": "Q27823",
+        "mesh": "Q000302"
+    },
     "methods": {
         "lgbtdb": "Q27377",
         "mesh": "Q000379"
     },
+    "microbiology": {
+        "lgbtdb": "Q27843",
+        "mesh": "Q000382"
+    },
     "organization & administration": {
         "lgbtdb": "Q27448",
         "mesh": "Q000458"
+    },
+    "pathology": {
+        "lgbtdb": "Q6287",
+        "mesh": "Q000473"
+    },
+    "physiology": {
+        "lgbtdb": "Q18349",
+        "mesh": "Q000502"
     },
     "prevention & control": {
         "lgbtdb": "Q27283",
@@ -294,6 +906,10 @@
     "statistics & numerical data": {
         "lgbtdb": "Q27202",
         "mesh": "Q000706"
+    },
+    "surgery": {
+        "lgbtdb": "Q3820",
+        "mesh": "Q000601"
     },
     "therapeutic use": {
         "lgbtdb": "Q27379",

@@ -16,6 +16,7 @@ import os.path
 import pandas as pd
 import pubmed_format
 import time
+import wikidata_mapping
 import yaml
 
 # Read in YAML file.
@@ -31,10 +32,10 @@ def main():
     parser.add_argument('-q', type=str, required=False, help='The query string to search using.')
     args=parser.parse_args()
 
-    download_pubmed_metadata(args.q, max_results=10)
+    download_pubmed_metadata(args.q)
 
 # Step 1: Query PubMed and download metadata
-def download_pubmed_metadata(keyword, mesh=True, max_results=100, use_existing_pmids=True):
+def download_pubmed_metadata(keyword, mesh=True, retmax=100, use_existing_pmids=True):
     print(f"Searching PubMed for articles related to: {keyword}")
     
     # Search PubMed with the keyword or MeSH term or something else
@@ -42,41 +43,50 @@ def download_pubmed_metadata(keyword, mesh=True, max_results=100, use_existing_p
         keyword = ('"%s"' % keyword) + '[MeSH]'
     else:
         keyword = ('"%s"' % keyword) + '[OT]'
-    handle = Entrez.esearch(db="pubmed", term=keyword, retmax=max_results)
-    record = Entrez.read(handle)
-    handle.close()
+
+    pubmed_ids = []
+    retstart = 0
+
+    while True:
+        handle = Entrez.esearch(db="pubmed", term=keyword, retmax=retmax, retstart=retstart)
+        record = Entrez.read(handle)
+        handle.close()
+
+        ids = record['IdList']
+        pubmed_ids.extend(ids)
+
+        if len(ids) < retmax:
+            break
     
-    pubmed_ids = record["IdList"]
+        retstart += retmax
     
     print(f"Found {len(pubmed_ids)} articles. Fetching metadata...")
     file_json = {}
-    #filtered_keyword = ((keyword.replace(' ', '_')).replace('"','')).replace("'", "")
-    #file_name = f"pubmed_{filtered_keyword}_{str(max_results)}.json"
-    #if os.path.isfile(file_name):
-    #    with open(file_name, 'r') as f:
-    #        file_json = json.load(f)
-    #else:
-    #    file_json = {}
 
-    #setA = set(pubmed_ids)
-    #setB = set(file_json.keys())
+    final_pubmed_ids = []
+    pubmed_wikibase_mappings = {}
+    with open('pmid-wikibase-mapping.json', 'r') as f:
+        pubmed_wikibase_mappings = json.load(f)
 
-    #pubmed_ids = setA.difference(setB)
+    for pubmed_id in pubmed_ids:
+        if pubmed_id not in pubmed_wikibase_mappings.keys():
+            final_pubmed_ids.append(pubmed_id)
 
     # Fetch article details using the list of PubMed IDs
-    if len(pubmed_ids) > 0:
-        handle = Entrez.efetch(db="pubmed", id=",".join(pubmed_ids), retmode="xml")
+    if len(final_pubmed_ids) > 0:
+    #    if len(final_pubmed_ids) > 500:
+    #        chunks = [final_pubmed_ids[x:x+100] for x in range(0, len(final_pubmed_ids), 100)]
+    #    else:
+    #        chunks = [final_pubmed_ids]
+    #
+    #    for counter, chunk in enumerate(chunks):
+    #        print("Obtaining Wikidata identifiers for chunk %s out of %s..." % (str(counter), str(len(chunks))))
+    #        wikidata_mapping.get_wikidata_id(chunk, id_type="PubMed")
+    #        time.sleep(10)
+
+        handle = Entrez.efetch(db="pubmed", id=",".join(final_pubmed_ids), retmode="xml")
         records = Entrez.read(handle)
         handle.close()
-    #elif use_existing_pmids:
-    #    records = {}
-    #    records["PubmedArticle"] = []
-    #    with open(file_name, 'r') as f:
-    #        json_data = json.load(f)
-    #        for pmid, article in json_data.items():
-    #            records["PubmedArticle"].append({
-    #                "MedlineCitation": article
-    #            })
 
     # Extract metadata
     to_add = []
@@ -91,16 +101,6 @@ def download_pubmed_metadata(keyword, mesh=True, max_results=100, use_existing_p
 
         pubmed_objects = pubmed_format.process_object(article["MedlineCitation"])
         to_add.append(pubmed_objects)
-
-    exit()
-    
-    # Create DataFrame and save it as a spreadsheet
-    df = pd.DataFrame(articles)
-    file_name = f"pubmed_{filtered_keyword}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
-    df.to_excel(file_name, index=False)
-    
-    print(f"Saved metadata to {file_name}")
-    return file_name
 
 def format_pub_date(pub_date):
     """Convert PubMed's complex date format to a simple 'YYYY-MM-DD' string."""

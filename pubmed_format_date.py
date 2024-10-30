@@ -19,8 +19,12 @@ def process_date(pubmed_date):
                 month = strptime(str(pubmed_date['Month']), '%b').tm_mon
             except ValueError:
                 month = str(pubmed_date['Month'])
+            if len(str(month)) == 1:
+                month = "0" + str(month)
             if 'Day' in pubmed_date:
                 day = pubmed_date['Day']
+                if len(str(day)) == 1:
+                    day = "0" + str(day)
                 return f"{year}-{month}-{day}"
             else:
                 return f"{year}-{month}-00"

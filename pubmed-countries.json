@@ -16,7 +16,9 @@
     "Aruba": {},
     "Ashmore and Cartier Islands": {},
     "Atlantic Ocean": {},
-    "Australia": {},
+    "Australia": {
+        "lgbtdb": "Q26305"
+    },
     "Austria": {},
     "Azerbaijan": {},
     "Bahamas": {},
@@ -51,7 +53,9 @@
     "Burundi": {},
     "Cambodia": {},
     "Cameroon": {},
-    "Canada": {},
+    "Canada": {
+        "lgbtdb": "Q26255"
+    },
     "Cape Verde": {},
     "Cayman Islands": {},
     "Central African Republic": {},
@@ -134,7 +138,9 @@
     "Indonesia": {},
     "Iran": {},
     "Iraq": {},
-    "Ireland": {},
+    "Ireland": {
+        "lgbtdb": "Q26321"
+    },
     "Isle of Man": {},
     "Israel": {},
     "Italy": {},
@@ -195,7 +201,9 @@
     "Nauru": {},
     "Navassa Island": {},
     "Nepal": {},
-    "Netherlands": {},
+    "Netherlands": {
+        "lgbtdb": "Q26337"
+    },
     "Netherlands Antilles": {},
     "New Caledonia": {},
     "New Zealand": {},
@@ -267,7 +275,9 @@
     "Suriname": {},
     "Svalbard": {},
     "Swaziland": {},
-    "Sweden": {},
+    "Sweden": {
+        "lgbtdb": "Q26331"
+    },
     "Switzerland": {
         "lgbtdb": "Q26333",
         "wikidata": "Q39"

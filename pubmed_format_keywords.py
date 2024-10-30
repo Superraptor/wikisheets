@@ -6,8 +6,16 @@
 #   pubmed_format_keywords.py
 #
 
+from pathlib import Path
+
 import constants
 import json
+import yaml
+
+# Read in YAML file.
+yaml_dict=yaml.safe_load(Path("project.yaml").read_text())
+
+wikibase_name = yaml_dict['wikibase']['wikibase_name']
 
 with open(constants.OT_mapping_file, 'r') as f:
     keywords_json = json.load(f)
@@ -43,15 +51,27 @@ def process_keyword(keyword):
             except AttributeError:
                 pass
         else:
+            # TODO: Fix
             keywords_json[keyword] = {}
-            with open('pubmed-keywords.json', 'w') as f:
+            with open(constants.OT_mapping_file, 'w') as f:
                 json.dump(keywords_json, f, indent=4, sort_keys=True)
             print("Keyword (%s) not found. Please add a mapping to the appropriate JSON file to continue." % str(keyword))
             exit()
     else:
         keywords_json[keyword] = {}
-        with open('pubmed-keywords.json', 'w') as f:
+        with open(constants.OT_mapping_file, 'w') as f:
             json.dump(keywords_json, f, indent=4, sort_keys=True)
         print("Keyword (%s) not found. Please add a mapping to the appropriate JSON file to continue." % str(keyword))
-        exit()
+        add_to_mapping_file(keyword)
+        return process_keyword(keyword)
+    
     return processed_keyword
+
+def add_to_mapping_file(keyword_str):
+    new_match = input('What is the QID that matches the keyword "%s"?\n' % (str(keyword_str)))
+    keywords_json[str(keyword_str)][wikibase_name] = new_match.strip()
+
+    with open(constants.OT_mapping_file, 'w') as f:
+        json.dump(keywords_json, f, indent=4, sort_keys=True)
+
+    return new_match

@@ -52,7 +52,9 @@ NlmCategory_mapping_file = "pubmed-nlmcategory.json"
 PubModel_mapping_file = "pubmed-pubmodel.json"
 
 # Tertiary Mappings
+award_type_mapping_file = "pubmed-award-types.json"
 grants_mapping_file = "pubmed-grants.json"
+funding_mechanism_mapping_file = "pubmed-funding-mechanisms.json"
 nlm_wikibase_mapping_file = "nlm-wikibase-mapping.json"
 pmid_wikibase_mapping_file = "pmid-wikibase-mapping.json"
 

@@ -134,6 +134,7 @@
     "Case Reports": {
         "MeSH Unique ID": "",
         "Scope Note": "Clinical presentations that may be followed by evaluative studies that eventually lead to a diagnosis.",
+        "lgbtdb_instance_of": "Q21187",
         "lgbtdb_publication_type": "Q27017"
     },
     "Catalog": {
@@ -249,6 +250,7 @@
     "Comparative Study": {
         "MeSH Unique ID": "",
         "Scope Note": "Comparison of outcomes, results, responses, etc for different techniques, therapeutic approaches or other inputs.",
+        "lgbtdb_instance_of": "Q27849",
         "lgbtdb_publication_type": "Q27040"
     },
     "Congress": {
@@ -359,6 +361,7 @@
     "Editorial": {
         "MeSH Unique ID": "",
         "Scope Note": "Work consisting of a statement of the opinions, beliefs, and policy of the editor or publisher of a journal, usually on current matters of medical or scientific significance to the medical community or society at large. The editorials published by editors of journals representing the official organ of a society or organization are generally substantive.",
+        "lgbtdb_instance_of": "Q11212",
         "lgbtdb_publication_type": "Q27060"
     },
     "Electronic Supplementary Materials": {
@@ -563,6 +566,7 @@
     "Letter": {
         "MeSH Unique ID": "",
         "Scope Note": "Work consisting of written or printed communication between individuals or between persons and representatives of corporate bodies. The correspondence may be personal or professional. In medical and other scientific publications the letter is usually from one or more authors to the editor of the journal or book publishing the item being commented upon or discussed. LETTER is often accompanied by COMMENT.",
+        "lgbtdb_instance_of": "Q5507",
         "lgbtdb_publication_type": "Q26035"
     },
     "Manuscript": {
@@ -626,6 +630,7 @@
     "Observational Study": {
         "MeSH Unique ID": "",
         "Scope Note": "A work that reports on the results of a clinical study in which participants may receive diagnostic, therapeutic, or other types of interventions, but the investigator does not assign participants to specific interventions (as in an interventional study).",
+        "lgbtdb_instance_of": "Q27108",
         "lgbtdb_publication_type": "Q27108"
     },
     "Observational Study, Veterinary": {
@@ -786,6 +791,7 @@
     "Randomized Controlled Trial": {
         "MeSH Unique ID": "",
         "Scope Note": "A work that reports on a clinical trial that involves at least one test treatment and one control treatment, concurrent enrollment and follow-up of the test- and control-treated groups, and in which the treatments to be administered are selected by a random process, such as the use of a random-numbers table.",
+        "lgbtdb_instance_of": "Q27857",
         "lgbtdb_publication_type": "Q27136"
     },
     "Randomized Controlled Trial, Veterinary": {

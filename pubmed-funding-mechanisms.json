@@ -1,0 +1,38 @@
+{
+    "F": {
+        "name": "fellowships",
+        "lgbtdb": "Q27466"
+    },
+    "K": {
+        "name": "career development awards",
+        "lgbtdb": "Q27465"
+    },
+    "N": {
+        "name": "research contracts",
+        "lgbtdb": ""
+    },
+    "P": {
+        "name": "program project and research center grants",
+        "lgbtdb": "Q27468"
+    },
+    "R": {
+        "name": "research project grants",
+        "lgbtdb": "Q27463"
+    },
+    "S": {
+        "name": "research-related programs (equipment etc.)",
+        "lgbtdb": ""
+    },
+    "T": {
+        "name": "training grants",
+        "lgbtdb": "Q27467"
+    },
+    "U": {
+        "name": "cooperative agreements",
+        "lgbtdb": ""
+    },
+    "Y": {
+        "name": "interagency agreements",
+        "lgbtdb": ""
+    }
+}
